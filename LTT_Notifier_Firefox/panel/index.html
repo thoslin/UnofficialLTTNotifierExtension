@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<!--
+Part of the LinusTechTips notifier for Firefox. Licensed under Creative Commons 4.0 attribution
+Visit the thread on the LTT forum: http://linustechtips.com/main/topic/105653-unofficial-linus-tech-tips-notifier-for-firefox
+Created by colonel_mortis on the LTT forum
+-->
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>LTT_NF v1</title>
+	<link href="./fa/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="./panel-main.css" rel="stylesheet" type="text/css">
+	<link href="./panel-day.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+	<header id="header" class="shadow">
+		<div id="ltt-content-block" class="inline-blk">
+			<div class="ltt-content-container pointer" id="settings">
+				<span class="content-icon"><span class="fa fa-cog fa-lg"></span><span class="align-center-helper"></span></span>
+			</div>
+
+			<div class="ltt-content-container hide-until-login" id="messages">
+				<span class="icon-shadow-helper"></span>
+				<span class="content-icon"><span class="fa fa-envelope fa-lg pointer"></span><span class="align-center-helper"></span></span>
+				<span class="content-badge num-messages">?</span>
+				<div class="ltt-content hover-content" id="message-content">
+					<div class='notification-header'>
+						<h3 class="inline-blk">Personal Messages</h3> <span>(<span class='num-messages'>?</span> new)</span>
+						<span class='ltt-content-tools'><span title="Open Messenger" class="external-link fa fa-external-link" data-url="https://linustechtips.com/main/index.php?app=members&module=messaging"></span>&nbsp;&nbsp;<span class="pointer viewed fa fa-check-square-o" title="Mark Viewed" data-what="messages"></span></span>
+					</div>
+					<div class="content-warning ltt-down hide">
+						<span class="fa fa-warning"></span> This information may be out of date - LTT seems to be down
+					</div>
+					<div class="message-data-block data-block" data-next-index="10">
+						<!--Message data gets placed here-->
+					</div>
+				</div>
+			</div>
+			<div class="ltt-content-container hide-until-login" id="notifications">
+				<span class="icon-shadow-helper"></span>
+				<span class="content-icon"><span class="fa fa-bell fa-lg pointer"></span><span class="align-center-helper"></span></span>
+				<span class="content-badge num-notifications">?</span>
+				<div class="ltt-content hover-content" id="notification-content">
+					<div class="notification-header">
+						<h3 class="inline-blk">Notifications</h3> <span>(<span class='num-notifications'>?</span> new)</span>
+						<span class='ltt-content-tools'><span title="Open Notification Log" class="external-link fa fa-external-link" data-url="https://linustechtips.com/main/index.php?app=core&module=usercp&area=notificationlog"></span>&nbsp;&nbsp;<span class="pointer viewed fa fa-check-square-o" title="Mark Viewed" data-what="notifications"></span></span>
+					</div>
+					<div class="content-warning ltt-down hide">
+						<span class="fa fa-warning"></span> This information may be out of date - LTT seems to be down
+					</div>
+					<div class="notification-data-block data-block" data-next-index="10">
+						<!--Notification data gets placed here-->
+					</div>
+				</div>
+			</div>
+			<!--div class="ltt-content-container moderator-only hide-until-login" id="reports">
+				<span class="icon-shadow-helper"></span>
+				<span class="content-icon"><span class="fa fa-exclamation-triangle fa-lg pointer"></span><span class="align-center-helper"></span></span>
+				<span class="content-badge num-reports">?</span>
+				<div class="ltt-content hover-content" id="report-content">
+					<div class="notification-header">
+						<h3 class="inline-blk">Open Reports</h3>
+						<span class='ltt-content-tools'><span title="Open Moderator CP" class="external-link fa fa-external-link" data-url="https://linustechtips.com/main/index.php?app=core&module=reports&do=index"></span></span>
+					</div>
+					<div class="content-warning ltt-down hide">
+						<span class="fa fa-warning"></span> This information may be out of date - LTT seems to be down
+					</div>
+					<div class="report-data-block data-block" data-next-index="10">
+						<!--Report data gets placed here-- >
+					</div>
+				</div>
+			</div-->
+			<div class="ltt-content-container" id="errors" data-num="0" data-num-internal="0">
+				<span class="icon-shadow-helper"></span>
+				<span class="content-icon"><span class="fa fa-times-circle fa-lg pointer"></span><span class="align-center-helper"></span></span>
+				<span class="content-badge num-errors">0</span>
+				<div class="ltt-content hover-content data-block" id="error-content">
+					<div class="notification-header">
+						<h3 class="inline-blk">Errors</h3>
+						<span class="ltt-content-tools"><span class="fa fa-copy copy-debug pointer"></span></span>
+					</div>
+					<div id="ERR_LOGIN" class="error-content external-link" data-url="https://linustechtips.com/main/index.php?app=core&module=global&section=login">You're <b>not logged in</b> to the LTT forum. Click here to log in.</div>
+					<div id='ERR_DOWNTIME' class="error-content">The <b>forum appears to be down</b>, or you have <b>no internet connection</b>.</div>
+					<div id="ERR_ipb4" class="error-content">The forum seems to have updated to an unsupported version of the forum software.</div>
+					<div id="ERR_YOUTUBE" class="error-content">Failed to retrieve data from the <b>YouTube API</b>.</div>
+					<div id="ERR_TWITCH" class="error-content">Failed to retrieve data from the <b>Twitch API</b>.</div>
+					<div id="ERR_YT_QUOTA" class="error-content">The <b>YouTube API quota</b> appears to have been used. Please submit a bug report.</div>
+					<div id="ERR_INTERNAL" class="error-content">The addon has generated <span class="num-internal-errors">0</span> <b>internal error(s)</b>.<span class="expand-button pointer"><i class="fa fa-toggle-down"></i></span>
+					</div>
+					<div class="hide expand-content">
+						<ul id="ERR_INTERNAL-DETAILS">
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="branding-right">
+			<div id="user" class="inline-blk external-link" data-url="" data-loaded="false">
+				<span id="username"></span>
+				<img src="./images/not-logged-in-small.png" alt="" height="40" class="user-img">
+				<!--User picture and link to profile-->
+			</div>
+			<div id="branding" class="inline-blk">
+				<img src="./images/ltt.png" alt="linustechtips" height=40 class="external-link" data-url="https://linustechtips.com/main/">
+			</div>
+		</div>
+	</header>
+
+
+
+
+
+	<article>
+		<div class="youtube content-block" id="yt-ltt">
+		    <!--LTT YouTube data-->
+			<div class='yt-channel-logo-container external-link' data-url="https://www.youtube.com/user/linustechtips">
+				<img src='./images/ltt.png' alt='LinusTechTips' class='yt-channel-logo dynamic-image'>
+			</div>
+			<figure class="yt-thumbnail external-link">
+				<img src='../pixel.png' alt='' class='thumbnail'>
+				<figcaption> </figcaption>
+			</figure>
+			<figure class="yt-thumbnail external-link">
+				<img src='../pixel.png' alt='' class='thumbnail'>
+				<figcaption> </figcaption>
+			</figure>
+			<figure class="yt-thumbnail external-link">
+				<img src='../pixel.png' alt='' class='thumbnail'>
+				<figcaption> </figcaption>
+			</figure>
+		</div>
+		<div class="youtube content-block" id="yt-tq">
+			<!--TechQuickie youtube data-->
+			<div class='yt-channel-logo-container external-link' data-url="https://www.youtube.com/user/techquickie">
+				<img src='./images/tq.png' alt='Tech Quickie' class='yt-channel-logo dynamic-image'>
+			</div>
+			<figure class="yt-thumbnail external-link">
+				<img src='../pixel.png' alt='' class='thumbnail'>
+				<figcaption title=" "> </figcaption>
+			</figure>
+			<figure class="yt-thumbnail external-link">
+				<img src="../pixel.png" alt="" class="thumbnail">
+				<figcaption> </figcaption>
+			</figure>
+			<figure class="yt-thumbnail external-link">
+				<img src="../pixel.png" alt="" class="thumbnail">
+				<figcaption> </figcaption>
+			</figure>
+		</div>
+		<div class="youtube content-block" id="yt-csf">
+			<!--Channel Superfun youtube data-->
+			<div class='yt-channel-logo-container external-link' data-url="https://www.youtube.com/user/channelsuperfun">
+				<h3>Channel Superfun</h3>
+			</div>
+			<figure class="yt-thumbnail external-link">
+				<img src="../pixel.png" alt="" class="thumbnail">
+				<figcaption> </figcaption>
+			</figure>
+			<figure class="yt-thumbnail external-link">
+				<img src="../pixel.png" alt="" class="thumbnail">
+				<figcaption> </figcaption>
+			</figure>
+			<figure class="yt-thumbnail external-link">
+				<img src="../pixel.png" alt="" class="thumbnail">
+				<figcaption> </figcaption>
+			</figure>
+		</div>
+		<div class="content-block wide-content-block ltt-content-block" id="ltt-messages">
+			<h3>Messages</h3>
+			<span class='ltt-content-tools'><span title="Open Messenger" class="external-link fa fa-external-link" data-url="https://linustechtips.com/main/messenger/"></span>&nbsp;&nbsp;<span class="pointer viewed fa fa-check-square-o" title="Mark Viewed" data-what="messages"></span></span>
+			<div id="message-panel" class="">
+				Initialising
+			</div>
+		</div>
+		<div class="content-block wide-content-block ltt-content-block hide-until-login" id="ltt-notifications">
+			<h3>Notifications</h3>
+			<span class='ltt-content-tools'><span title="Open Notification Log" class="external-link fa fa-external-link" data-url="https://linustechtips.com/main/notifications/"></span>&nbsp;&nbsp;<span class="pointer viewed fa fa-check-square-o" title="Mark Read" data-what="notifications"></span></span>
+			<div id="notification-panel" class="">
+				Initialising
+			</div>
+		</div>
+		<div id="mixed">
+			<div id="twitch" class="content-block">
+				<img src="./images/twitch.png" alt="Twitch" class="yt-channel-logo dynamic-image">
+				<div id="WAN" class="external-link" data-url="http://www.twitch.tv/linustech/">
+					<img src="./images/WAN.png" alt="WAN" class="dynamic-image">
+					<span class="status">OFFLINE</span>
+				</div>
+				<div class="twitch-block hide external-link" id="twitch-luke_lafr" data-url="http://twitch.tv/luke_lafr/">
+					<div>
+						<img src="./images/luke_lafr.png" height="40" class="twitch-img" />
+						<span class="twitch-live-now">Luke is live now!</span>
+					</div>
+					<span class="twitch-title">ERROR</span>
+				</div>
+			</div>
+			<div id="tools" class="content-block secondary-block">
+				<h3>Tools</h3>
+				<div class="switch-to-ltt pointer">Switch to LTT tab</div>
+				<div class="new-ltt pointer">New LTT Tab</div>
+			</div>
+			<div id="quick-settings" class="secondary-block content-block">
+				<h3>Quick Settings</h3>
+				<div>
+					<label class="pointer">
+						<input type="checkbox" data-setting="doNotDisturb" class="display-none setting" /><span class="QCContent blk">Do Not Disturb</span>
+					</label>
+				</div>
+				<div>
+					<label class="pointer">
+						<input type="checkbox" data-setting="sound" class="display-none setting" /><span class="QCContent blk">Sounds</span>
+					</label>
+				</div>
+			</div>
+			<div id="resume-welcome" class="secondary-block content-block hide no-auto-hide pointer">
+				Click to resume setup
+			</div>
+		</div>
+	</article>
+	<footer>
+		<div class="inline-blk">
+			<span class="external-link" data-url="https://linustechtips.com/main/topic/105653-unofficial-linus-tech-tips-notifier-for-firefox/">LTT Notifier for Firefox - v<span class="version">??</span></span>
+			<span>Developed by <span class="external-link" data-url="https://linustechtips.com/main/profile/10813-colonel-mortis/">Colonel_Mortis</span></span>
+			<span>Based on UI design by <span class="external-link" data-url="https://linustechtips.com/main/profile/44947-amorassofpixelz/">AMorassOfPixelz</span></span>
+		</div>
+	</footer>
+
+
+
+	<!-- -->
+
+
+
+	<section id="full-overlay">
+		<div id="debug-confirmation-dialog" class="shadow overlay-content">
+				<div class="message">Do you want to include the data loaded from the forum as well? This will contain a list of your 50 most recent <b>PMs</b> and your current <b>notifications</b>.
+				<span class="moderator-only"><br/>The <b>report data</b> will also be included, so please only release this in private conversation.</span>
+				<br/>It will also significantly increase the <b>file size</b>, so please only include this if it is relevant to any issues you've been having</div>
+				<div id="debug-confirmation-buttons"><span data-button="yes" class="shadow pointer">Yes</span><span data-button="no" class="shadow pointer">No</span></div>
+		</div>
+		<!--Full-page overlay for welcome messages etc-->
+		<div id="welcome-message" class="shadow overlay-content">
+				<h3>Hi! First of all, lets get a few things set up</h3>
+				<i>Everything you set here can be changed on the settings page</i>
+				<div class="welcome-page" data-page="1">
+						<h4>What would you like the addon to keep you up to date on?</h4>
+						<label class="pointer blk">Forum Notifications<input type="checkbox" class="display-none setting" data-setting="ltt.notifications"><span class="toggle"></span></label>
+						<label class="pointer blk">Forum Messages<input type="checkbox" class="display-none setting" data-setting="ltt.messages"><span class="toggle"></span></label>
+						<label class="pointer blk moderator-only">Reports<input type="checkbox" class="display-none setting" data-setting="ltt.reports"><span class="toggle"></span></label>
+						<label class="pointer blk">New LinusTechTips videos<input type="checkbox" class="display-none setting" data-setting="youtube.ltt"><span class="toggle"></span></label>
+						<label class="pointer blk">New Tech Quickie videos<input type="checkbox" class="display-none setting" data-setting="youtube.tq"><span class="toggle"></span></label>
+						<label class="pointer blk">New Channel Superfun videos<input type="checkbox" class="display-none setting" data-setting="youtube.csf"><span class="toggle"></span></label>
+						<label class="pointer blk">Linus' livestreams (including the WAN show)<input type="checkbox" class="display-none setting" data-setting="twitch.LinusTech"><span class="toggle"></span></label>
+						<label class="pointer blk">Luke's livestreams<input type="checkbox" class="display-none setting" data-setting="twitch.Luke_Lafr"><span class="toggle"></span></label>
+				</div>
+				<div class="welcome-page hide" data-page="2">
+						<h4>Which widgets would you like to be shown on this page?</h4>
+						<!--Enable and disable panels-->
+						<label class="pointer blk">YouTube - LinusTechTips<input type="checkbox" class="display-none setting" data-setting="panel.yt-ltt"><span class="toggle"></span></label>
+						<label class="pointer blk">YouTube - TechQuickie<input type="checkbox" class="display-none setting" data-setting="panel.yt-tq"><span class="toggle"></span></label>
+						<label class="pointer blk">YouTube - Channel Superfun<input type="checkbox" class="display-none setting" data-setting="panel.yt-csf"><span class="toggle"></span></label>
+						<label class="pointer blk">LTT - Notifications<input type="checkbox" class="hide setting" data-setting="panel.ltt-notifications"><span class="toggle"></span></label>
+						<label class="pointer blk">LTT - Messages<input type="checkbox" class="hide setting" data-setting="panel.ltt-messages"><span class="toggle"></span></label>
+						<label class="pointer blk">Twitch<input type="checkbox" class="display-none setting" data-setting="panel.twitch"><span class="toggle"></span></label>
+						<label class="pointer blk">Tools<input type="checkbox" class="display-none setting" data-setting="panel.tools"><span class="toggle"></span></label>
+						<label class="pointer blk">Quick Settings<input type="checkbox" class="display-none setting" data-setting="panel.quick-settings"><span class="toggle"></span></label>
+				</div>
+				<div class="welcome-page hide" data-page="3">
+						<!--Miscellaneous settings-->
+						<!--Amazon-->
+						<!--label class="pointer blk"><b>Amazon Affiliate code injection</b><input type="checkbox" class="display-none setting" data-setting="injectAmazonAffiliate"><span class="toggle"></span></label>
+						<i class="description">When enabled, when you browse Amazon the LinusMediaGroup affiliate code will be seamlessly injected so that they earn commision on your purchases.</i--> <!--disabled for now-->
+						<!--Popup notifications-->
+						<label class="pointer blk"><b>Desktop notifications</b><input type="checkbox" class="display-none setting" data-setting="popup"><span class="toggle"></span></label>
+						<i class="description">Show a popup desktop notification when new information is availlable, eg. a new forum notification. In the main settings page, you can change which events trigger a notification.</i>
+						<!--Sounds-->
+						<label class="pointer blk"><b>Sounds</b><input type="checkbox" class="display-none setting" data-setting="sound"><span class="toggle"></span></label>
+						<i class="description">Play a notification sound when new information is available, eg. a new forum notification. In the main settings page, you can change the sounds associated with each event (or turn one off entirely).</i>
+				</div>
+				<div class="welcome-page hide" data-page="4">
+						<!--Miscellaneous settings II-->
+						<!--Auto mark read-->
+						<label class="setting-container pointer">Automatically mark notifications read
+							<select class="setting" data-setting="autoMarkRead">
+								<option value="none">never</option>
+								<option value="first">when the top unread notification is clicked</option>
+								<option value="last">when the bottom unread notification is clicked</option>
+								<option value="any">when any notification is clicked</option>
+							</select>
+						</label>
+						<!--LTT helper/parser script injection-->
+						<label class="pointer blk"><b>Inject a helper script into LTT</b><input type="checkbox" class="display-none setting" data-setting="sound"><span class="toggle"></span></label>
+						<i class="description">Inject a script into the forum that will edit the page with the current number of notifications and messages, and will check whether the number of notifications and messages has increased when the page loads, giving you notifications even faster.</i>
+				</div>
+
+				<div id="welcome-controls" data-current-page="1" data-max-page="4">
+						<button class="fa fa-arrow-left" name="prev" disabled></button>
+						<button name="later" class="closeOverlay">Ask me again later</button>
+						<button name="never" class="closeOverlay">Cancel</button>
+						<button class="fa fa-arrow-right" name="next"></button>
+				</div>
+			</div>
+		<div id="settings-overlay" class="shadow overlay-content">
+			<h1 class="center">Settings</h1>
+			<div class="overlay-close-btn fa fa-close pointer"></div>
+			<div>
+				<div class="settings-left-pane inline-blk">
+					<div class="setting-helper">
+						<label class="setting-container pointer" data-adv-setting="general">
+							<span class="setting-img"><i class="fa fa-cog fa-fw"></i></span>
+							<span class="setting-name">General</span>
+						</label>
+					</div>
+					<div class="setting-helper">
+						<label class="setting-container pointer" data-adv-setting="sounds">
+							<span class="setting-img"><i class="fa fa-volume-up fa-fw"></i></span>
+							<span class="setting-name">Sounds</span>
+							<span><input class="display-none setting" type="checkbox" data-setting="sound" data-child-settings="sound.*"><span class="toggle"></span></span>
+						</label>
+					</div>
+					<div class="setting-helper">
+						<label class="setting-container pointer" data-adv-setting="popups">
+							<span class="setting-img"><i class="fa fa-bullhorn fa-fw"></i></span>
+							<span class="setting-name">Notification Popups</span>
+							<span><input class="display-none setting" type="checkbox" data-setting="popup" data-child-settings="popup.*"><span class="toggle"></span></span>
+						</label>
+					</div>
+					<div class="setting-helper">
+						<label class="setting-container pointer" data-adv-setting="youtube">
+							<span class="setting-img"><i class="fa fa-youtube-play fa-fw"></i></span>
+							<span class="setting-name">YouTube</span>
+							<span><input class="display-none setting" type="checkbox" data-setting="youtube" data-child-settings="youtube.* panel.yt-*"><span class="toggle"></span></span>
+						</label>
+					</div>
+					<div class="setting-helper">
+						<label class="setting-container pointer" data-adv-setting="twitch">
+							<span class="setting-img"><i class="fa fa-twitch fa-fw"></i></span>
+							<span class="setting-name">Twitch</span>
+							<span><input class="display-none setting" type="checkbox" data-setting="twitch" data-child-settings="twitch.* panel.twitch"><span class="toggle"></span></span>
+						</label>
+					</div>
+					<div class="setting-helper">
+						<label class="setting-container pointer" data-adv-setting="forum">
+							<span class="setting-img"><i class="fa fa-comment fa-fw"></i></span>
+							<span class="setting-name">Forum</span>
+						</label>
+					</div>
+					<div class="setting-helper">
+						<label class="setting-container pointer" data-adv-setting="ui">
+							<span class="setting-img"><i class="fa fa-eye fa-fw"></i></span>
+							<span class="setting-name">UI</span>
+						</label>
+					</div>
+					<div class="setting-helper">
+						<label class="setting-container pointer" data-adv-setting="debug">
+							<span class="setting-img"><i class="fa fa-bug fa-fw"></i></span>
+							<span class="setting-name">Debug</span>
+						</label>
+					</div>
+					<div class="setting-helper">
+						<label class="setting-container pointer hide" data-adv-setting="advanced">
+							<span class="setting-img"><i class="fa fa-cogs fa-fw"></i></span>
+							<span class="setting-name">Advanced</span>
+						</label>
+					</div>
+					<div class="setting-helper">
+						<label class="setting-container pointer display-none" data-adv-setting="accessibility">
+							<span class="setting-img"><i class="fa fa-medkit fa-fw"></i></span>
+							<span class="setting-name">Accessibility</span>
+						</label>
+					</div>
+				</div>
+				<!----------->
+				<div class="settings-right-pane inline-blk">
+					<div id="settings-tutorial" class="center">Hover over a setting to view more details and sub-settings</div>
+					<div class="shadow settings-more-pane first" data-adv-setting="general">
+						<p class="setting-details">General Settings</p>
+						<label class="setting-container pointer">Do Not Disturb
+							<input type="checkbox" class="display-none setting" data-setting="doNotDisturb"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer">Open LTT links in
+							<select class="setting" data-setting="link.target">
+								<option value="blank">New Tab</option>
+								<option value="existing">Existing LTT Tab</option>
+							</select>
+						</label>
+						<!--label class="setting-container pointer">Inject the Amazon affiliate code
+							<input type="checkbox" class="display-none setting" data-setting="injectAmazonAffiliate"><span class="toggle"></span>
+						</label--> <!-- disabled for now -->
+						<label class="setting-container pointer">Automatically mark notifications read when:<br/>
+							<select class="setting" data-setting="autoMarkRead">
+								<option value="none">never</option>
+								<option value="first">top unread notification is clicked</option>
+								<option value="last">bottom unread notification is clicked</option>
+								<option value="any">any notification is clicked</option>
+							</select>
+						</label>
+					</div>
+					<div class="shadow settings-more-pane" data-adv-setting="sounds">
+						<p class="setting-details">Play a sound when new content is available</p>
+						<!-------------------------------------------
+								---------------------------------------------
+								-------------------------------------------->
+						<ul class="sortable remove-list-styling" data-setting="sound.priority">
+							<li class="not-sortable">Volume:
+								<input type="range" min="0" max="1" step="0.01" data-setting="sound.volume" class="setting">
+							</li>
+							<li class="not-sortable preview">
+								<h4>Preview</h4>
+								<button class="preview-sound with-fa" data-sound="notification-1.mp3">&#xf028; 1</button>
+								<button class="preview-sound with-fa" data-sound="notification-2.mp3">&#xf028; 2</button>
+								<button class="preview-sound with-fa" data-sound="notification-3.mp3">&#xf028; 3</button>
+								<button class="preview-sound with-fa" data-sound="notification-4.mp3">&#xf028; 4</button>
+							</li>
+							<li><span class="handle fa fa-sort"></span>New notification
+								<select class="setting with-fa" data-setting="sound.notifications">
+									  <option value="notification-1.mp3">&#xf028; 1</option>
+									  <option value="notification-2.mp3">&#xf028; 2</option>
+									  <option value="notification-3.mp3">&#xf028; 3</option>
+									  <option value="notification-4.mp3">&#xf028; 4</option>
+									  <option value="">none</option>
+								</select>
+							</li>
+							<li><span class="handle fa fa-sort"></span>New Personal Message
+								<select class="setting with-fa" data-setting="sound.messages">
+									  <option value="notification-1.mp3">&#xf028; 1</option>
+									  <option value="notification-2.mp3">&#xf028; 2</option>
+									  <option value="notification-3.mp3">&#xf028; 3</option>
+									  <option value="notification-4.mp3">&#xf028; 4</option>
+									  <option value="">none</option>
+								</select>
+							</li>
+							<li class="moderator-only"><span class="handle fa fa-sort"></span>New Report
+								<select class="setting with-fa" data-setting="sound.reports">
+									  <option value="notification-1.mp3">&#xf028; 1</option>
+									  <option value="notification-2.mp3">&#xf028; 2</option>
+									  <option value="notification-3.mp3">&#xf028; 3</option>
+									  <option value="notification-4.mp3">&#xf028; 4</option>
+									  <option value="">none</option>
+								</select>
+							</li>
+							<li><span class="handle fa fa-sort"></span>New Upload to YouTube
+								<select class="setting with-fa" data-setting="sound.youtube">
+									  <option value="notification-1.mp3">&#xf028; 1</option>
+									  <option value="notification-2.mp3">&#xf028; 2</option>
+									  <option value="notification-3.mp3">&#xf028; 3</option>
+									  <option value="notification-4.mp3">&#xf028; 4</option>
+									  <option value="">none</option>
+								</select>
+							</li>
+							<li><span class="handle fa fa-sort"></span>Linus goes live on Twitch
+								<select class="setting with-fa" data-setting="sound.twitch">
+									  <option value="notification-1.mp3">&#xf028; 1</option>
+									  <option value="notification-2.mp3">&#xf028; 2</option>
+									  <option value="notification-3.mp3">&#xf028; 3</option>
+									  <option value="notification-4.mp3">&#xf028; 4</option>
+									  <option value="">none</option>
+								</select>
+							</li>
+							<li><span class="handle fa fa-sort"></span>A forum error occurs
+								<select class="setting with-fa" data-setting="sound.error">
+									  <option value="notification-1.mp3">&#xf028; 1</option>
+									  <option value="notification-2.mp3">&#xf028; 2</option>
+									  <option value="notification-3.mp3">&#xf028; 3</option>
+									  <option value="notification-4.mp3">&#xf028; 4</option>
+									  <option value="">none</option>
+								</select>
+							</li>
+							<li><span class="handle fa fa-sort"></span>The forum comes online
+								<select class="setting with-fa" data-setting="sound.uptime">
+									  <option value="notification-1.mp3">&#xf028; 1</option>
+									  <option value="notification-2.mp3">&#xf028; 2</option>
+									  <option value="notification-3.mp3">&#xf028; 3</option>
+									  <option value="notification-4.mp3">&#xf028; 4</option>
+									  <option value="">none</option>
+								</select>
+							</li>
+						</ul>
+					</div>
+					<!--  -->
+					<div class="shadow settings-more-pane" data-adv-setting="popups">
+						<p class="setting-details">Display a desktop notification when new content is available</p>
+						<label class="setting-container pointer">New forum notification
+							<input type="checkbox" class="display-none setting" data-setting="popup.notifications"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer">New forum personal message
+							<input type="checkbox" class="display-none setting" data-setting="popup.messages"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer moderator-only">New report
+							<input type="checkbox" class="display-none setting" data-setting="popup.reports"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer">New upload to YouTube
+							<input type="checkbox" class="display-none setting" data-setting="popup.youtube"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer">Linus or Luke go live on Twitch
+							<input type="checkbox" class="display-none setting" data-setting="popup.twitch"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer">The forum goes offline
+							<input type="checkbox" class="display-none setting" data-setting="popup.error"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer">The forum comes back online
+							<input type="checkbox" class="display-none setting" data-setting="popup.uptime"><span class="toggle"></span>
+						</label>
+					</div>
+					<div class="shadow settings-more-pane" data-adv-setting="youtube">
+						<p class="setting-details">Check for new uploads to LinusMediaGroup's YouTube channels</p>
+						<label class="setting-container pointer">LinusTechTips
+							<input type="checkbox" class="display-none setting" data-setting="youtube.ltt" data-child-settings="panel.yt-ltt"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer">TechQuickie
+							<input type="checkbox" class="display-none setting" data-setting="youtube.tq" data-child-settings="panel.yt-tq"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer">Channel Superfun
+							<input type="checkbox" class="display-none setting" data-setting="youtube.csf" data-child-settings="panel.yt-csf"><span class="toggle"></span>
+						</label>
+						<label class="setting-container">Update every
+							<input type="number" class="short-number setting" data-setting="updateTime.yt" min="1"> minute(s)</label>
+					</div>
+					<div class="shadow settings-more-pane" data-adv-setting="twitch">
+						<p class="setting-details">Check whether LinusMediaGroup are live on Twitch</p>
+						<label class="setting-container pointer">LinusTech
+							<input type="checkbox" class="display-none setting" data-setting="twitch.LinusTech"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer">luke_lafr
+							<input type="checkbox" class="display-none setting" data-setting="twitch.Luke_Lafr"><span class="toggle"></span>
+						</label>
+						<label class="setting-container">Update every
+							<input type="number" class="short-number setting" data-setting="updateTime.twitch" min="1"> minute(s)</label>
+					</div>
+					<div class="shadow settings-more-pane" data-adv-setting="forum">
+						<p class="setting-details">Check for new notifications and personal messages on the forum</p>
+						<label class="setting-container pointer">Check for notifications
+							<input type="checkbox" class="display-none setting" data-setting="ltt.notifications" data-child-settings="sound.notifications popup.notifications panel.ltt-notifications"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer">Check for personal messages
+							<input type="checkbox" class="display-none setting" data-setting="ltt.messages" data-child-settings="sound.messages popup.messages panel.ltt-messages"><span class="toggle"></span>
+						</label>
+						<!--label class="setting-container pointer moderator-only display-none">Check for reports
+							<input type="checkbox" class="display-none setting" data-setting="ltt.reports" data-child-settings="sound.reports popup.reports updateTime.reports"><span class="toggle"></span>
+						</label-->
+						<label class="setting-container">Update every
+							<input type="number" class="short-number setting" data-setting="updateTime.ltt" min="10"> seconds(s)
+							<span class="setting-more-info"><span class="fa fa-question-circle"></span>
+								<span class="info-content shadow">How often to reload the number of unread notification/PM details.</span>
+							</span>
+						</label>
+						<!--label class="setting-container display-none">Full update every
+							<input type="number" class="short-number setting" data-setting="updateTime.full" min="1"> minute(s)
+							<span class="setting-more-info"><span class="fa fa-question-circle"></span>
+								<span class="info-content shadow">How often to reload the full notification/PM details. Automatic when number of unread changes.</span>
+							</span>
+						</label>
+						<label class="setting-container moderator-only display-none">Update reports every
+							<input type="number" class="short-number setting" data-setting="updateTime.reports" min="1"> minute(s)</label>
+						<label class="setting-container pointer display-none">Inject helper script
+								<span class="setting-more-info"><span class="fa fa-question-circle"></span>
+										<span class="info-content shadow">Injects a script to update the number of notifications etc shown on the forum when the addon detects a change, and keeps the addon more up to date as you browse.</span>
+								</span>
+							<input type="checkbox" class="display-none setting" data-setting="ltt.injectParser"><span class="toggle"></span>
+						</label-->
+					</div>
+					<div class="shadow settings-more-pane" data-adv-setting="ui">
+						<p class="setting-details">Customise the widgets in the user interface<br/>If disabled here, you can still get desktop notifications and sounds</p>
+						<label class="setting-container pointer">YouTube - LinusTechTips
+							<input type="checkbox" class="display-none setting" data-setting="panel.yt-ltt"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer">YouTube - TechQuickie
+							<input type="checkbox" class="display-none setting" data-setting="panel.yt-tq"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer">YouTube - Channel Superfun
+							<input type="checkbox" class="display-none setting" data-setting="panel.yt-csf"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer">LTT - Messages
+							<input type="checkbox" class="display-none setting" data-setting="panel.ltt-messages"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer">LTT - Notifications
+							<input type="checkbox" class="display-none setting" data-setting="panel.ltt-notifications"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer">Twitch
+							<input type="checkbox" class="display-none setting" data-setting="panel.twitch"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer">Tools
+							<input type="checkbox" class="display-none setting" data-setting="panel.tools"><span class="toggle"></span>
+						</label>
+						<label class="setting-container pointer">Quick Settings
+							<input type="checkbox" class="display-none setting" data-setting="panel.quick-settings"><span class="toggle"></span>
+						</label>
+					</div>
+					<div class="shadow settings-more-pane" data-adv-setting="debug">
+						<p>Found a bug or having some issues? <button class="copy-debug">Copy the debugging data to the clipboard</button>
+						then <span class="external-link" data-url="https://linustechtips.com/main/topic/105653-linus-tech-tips-notifier-for-firefox/#replyForm">post it in the thread</span>
+						or <span class="external-link" data-url="https://linustechtips.com/main/messenger/compose/?to=10813">send me a PM</span>.
+						Make sure you include a detailed explanation of your issue.</p>
+					</div>
+					<div class="shadow settings-more-pane hide" data-adv-setting="advanced">
+						<p class="setting-details">You probably don't need to change these</p>
+						<label class="setting-container pointer">Soon?
+							<input type="checkbox" class="display-none setting" data-setting="" disabled><span class="toggle"></span>
+						</label>
+					</div>
+					<div class="shadow settings-more-pane last" data-adv-setting="accessibility">
+						<p class="setting-details">Accessibility options</p>
+						<label class="setting-container pointer">Soon?
+							<input type="checkbox" class="display-none setting" data-setting=""><span class="toggle"></span>
+						</label>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+</body>
+
+</html>

@@ -9,6 +9,9 @@
 *.userosscache
 *.sln.docstates
 
+LTT_Notifier_Firefox/api.txt
+LTT_Notifier_Firefox/src.txt
+
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
