@@ -10,10 +10,19 @@ This is 100% unofficial and is created and maintained by fans.
 This project is "Free Software" and is built for people and not for financial gain or profit.
 
 Here is the Free Software Foundation's definition of "Free Software":
-``` “Free software” means software that respects users' freedom and community. Roughly, it means that the users have the freedom to run, copy, distribute, study, change and improve the software. Thus, “free software” is a matter of liberty, not price. To understand the concept, you should think of “free” as in “free speech,” not as in “free beer”. We sometimes call it “libre software,” borrowing the French or Spanish word for “free” as in freedom, to show we do not mean the software is gratis.
+``` “Free software” means software that respects users' freedom and community.
+Roughly, it means that the users have the freedom to run, copy, distribute, study, change and improve the software.
+Thus, “free software” is a matter of liberty, not price. To understand the concept, you should think of “free” as in “free speech,”
+not as in “free beer”. We sometimes call it “libre software,” borrowing the French or Spanish word for “free” as in freedom,
+ to show we do not mean the software is gratis.
 
-We campaign for these freedoms because everyone deserves them. With these freedoms, the users (both individually and collectively) control the program and what it does for them. When users don't control the program, we call it a “nonfree” or “proprietary” program. The nonfree program controls the users, and the developer controls the program; this makes the program an instrument of unjust power.
-The four essential freedoms
+We campaign for these freedoms because everyone deserves them. With these freedoms,
+ the users (both individually and collectively) control the program and what it does for them.
+  When users don't control the program, we call it a “nonfree” or “proprietary” program.
+   The nonfree program controls the users, and the developer controls the program;
+    this makes the program an instrument of unjust power.```
+
+```The four essential freedoms
 
 A program is free software if the program's users have the four essential freedoms:
 
