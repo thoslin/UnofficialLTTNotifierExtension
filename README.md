@@ -23,7 +23,9 @@ not as in “free beer”. We sometimes call it “libre software,” borrowing 
     this makes the program an instrument of unjust power.
 
 > The four essential freedoms
+
 > A program is free software if the program's users have the four essential freedoms:
+
 >    The freedom to run the program as you wish, for any purpose (freedom 0).
     The freedom to study how the program works, and change it so it does your computing as you wish (freedom 1). Access to the source code is a precondition for this.
     The freedom to redistribute copies so you can help others (freedom 2).
