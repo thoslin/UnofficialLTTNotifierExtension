@@ -2,11 +2,9 @@
 Part of AluminiumTech's Unofficial LTT Notifier for Firefox Extension.
 
 Created by AluminiumTech.
-Developer Version: 1.0
-Consumer Version: 1711
+Version: 1.0
 
 TODO:
-
 
 Known Issues:
 
@@ -41,7 +39,7 @@ function main() {
 
 }
 
-//Get the API Key in file api.txt 
+//Get the API Key in file api.txt
 // This is in the .gitignore and users forking or cloning this repository must provide their own API key.
 function getApiKey(){
 
