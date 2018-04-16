@@ -1,0 +1,23 @@
+/*
+Part of the AluminiumTech Unofficial LTT Notifier.
+
+This Source Code Form is subject to the terms of the Mozilla Public
+License, v. 2.0. If a copy of the MPL was not distributed with this
+file, You can obtain one at http://mozilla.org/MPL/2.0/. */
+
+#activity, #wan, #messages{
+    background-color: #74849e;
+    width: auto;
+    height: auto;
+    margin: auto;
+    display:inline-block;
+    box-shadow: 10px 10px 5px grey;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+p {
+    font-size: 14px;  
+}
