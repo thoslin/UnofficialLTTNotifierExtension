@@ -3,24 +3,16 @@ Part of AluminiumTech's Unofficial LTT Notifier for Firefox Extension.
 
 Created by AluminiumTech.
 Version: 1.0
-
-TODO:
-
-Known Issues:
-
-
-
-Resolved:
 */
 
 //Initialize the variable but don't store the API key in the source code.
-var apiKey = "";
+var youtube_apiKey = "";
 //Initialize the variable but don't store the srcID in the source code.
 var srcID = "";
 
 const baseUrl = "https://linustechtips.com/main/";
 
-const yt_WatchPageURL = "https://www.youtube.com/watch?v=";
+const youtube_WatchPageURL = "https://www.youtube.com/watch?v=";
 
 //These are YouTube playlist IDs for making fetching YouTube info easier.
 const ltt_playlistID = "UUXuqSBlHAE6Xw-yeJA0Tunw";
@@ -47,62 +39,6 @@ function getApiKey(){
 //Each call to LinusTechTips.com must include our own SRC ID for debugging.
 // This is in the src.txt file.
 //This is in the .gitignore and users forking or cloning this repository must provide their own SRC ID.
-function getSRCID(){
-
-}
-
-function desktopNotifications(){
-
-}
-
-function playSound(){
-
-}
-
-function soundQueue(){
-
-}
-
-function sendRequest(){
-
-}
-
-function processTabs(){
-
-}
-
-function processTabsClose(){
-
-}
-
-function checkSettings(){
-
-}
-
-function onSettingsUpdate(){
-
-}
-
-function dispatchLTTData(){
-
-}
-
-function resetInterval(){
-
-}
-
-function createShortNotification(){
-
-}
-
-function updateBadge(){
-
-}
-
-function parseError(){
-
-}
-
-function checkYouTube(){
+function getSrcID(){
 
 }

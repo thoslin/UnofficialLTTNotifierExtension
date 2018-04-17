@@ -37,7 +37,7 @@ Portions of this work are licensed under Creative Commons 4.0 . In cases where w
 
 ## Platforms we're planning on supporting
 * Mozilla FireFox 57+
-* Microsoft Edge (Windows 10 only) 40+
+* Microsoft Edge (Windows 10 Desktop only) 40+
 * Modern versions of Google Chrome & Chromium
 
 ## Contributing to this project
@@ -49,7 +49,9 @@ Portions of this work are licensed under Creative Commons 4.0 . In cases where w
 * A Linus Tech Tips Forum Account (Optional) - Required for some features.
 
 ## To Do
-* Create UI
+* Create popup UI
+* Create Settings UI
+* Implement Settings Persistent Storage using WebStorage APIs
 * Implement login system of sorts
 * Implement browser notifications if user receives PM
 * Implement browser notifications for activity such as status updates.
