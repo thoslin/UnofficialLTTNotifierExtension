@@ -31,7 +31,7 @@ not as in “free beer”. We sometimes call it “libre software,” borrowing 
     The freedom to redistribute copies so you can help others (freedom 2).
     The freedom to distribute copies of your modified versions to others (freedom 3). By doing this you can give the whole community a chance to benefit from your changes. Access to the source code is a precondition for this.
 
-[Source](https://www.gnu.org/philosophy/free-sw.html).
+[Source/Credit](https://www.gnu.org/philosophy/free-sw.html).
 
 Portions of this work are licensed under Creative Commons 4.0 . In cases where we use other source code from open source software we will also include license information for those in separate license files. If a project's license is available in multiple languages, the English version shall prevail.
 
@@ -61,3 +61,8 @@ Portions of this work are licensed under Creative Commons 4.0 . In cases where w
 * Test extension to see if working
 * Fix Bugs
 * Publish Extension
+
+## Join Our Extension's Discord.
+Want to talk to us?
+
+We have our own discord server :P . Here's our [invite link](https://discord.gg/WWwfXF8)
