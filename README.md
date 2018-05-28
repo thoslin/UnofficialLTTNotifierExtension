@@ -36,8 +36,8 @@ not as in “free beer”. We sometimes call it “libre software,” borrowing 
 Portions of this work are licensed under Creative Commons 4.0 . In cases where we use other source code from open source software we will also include license information for those in separate license files. If a project's license is available in multiple languages, the English version shall prevail.
 
 ## Platforms we're planning on supporting
-* Mozilla FireFox 57+
-* Microsoft Edge (Windows 10 Desktop only) 40+
+* Mozilla FireFox 57+ (Desktop and Android)
+* Microsoft Edge 40+ (Windows 10 Desktop only)
 * Modern versions of Google Chrome & Chromium
 
 ## Contributing to this project
@@ -46,7 +46,7 @@ Portions of this work are licensed under Creative Commons 4.0 . In cases where w
 * A supported browser to test on.
 * A text or code editor. We recommend [Atom](https://atom.io) or [VS Code](https://code.visualstudio.com).
 * A Git client. We use [GitHub Desktop](https://desktop.github.com).
-* A Linus Tech Tips Forum Account (Optional) - Required for some features.
+* A Linus Tech Tips Forum Account (Optional) - Required for most features.
 
 ## To Do
 * Create popup UI
