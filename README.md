@@ -51,7 +51,7 @@ Portions of this work are licensed under Creative Commons 4.0 . In cases where w
 ## To Do
 * Create popup UI
 * Create Settings UI
-* Implement Settings Persistent Storage using WebStorage APIs
+* Implement Settings Persistent Storage using WebStorage APIs - Working On This
 * Implement login system of sorts
 * Implement browser notifications if user receives PM
 * Implement browser notifications for activity such as status updates.
