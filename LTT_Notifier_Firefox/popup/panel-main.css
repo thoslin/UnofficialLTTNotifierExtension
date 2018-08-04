@@ -1,0 +1,852 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+
+/*
+This file is for the layout of the panel
+*/
+
+body {
+	font-family:helvetica, FreeSans, sans-serif;
+	min-width:350px;
+	position:absolute;
+	margin:0;
+	-moz-user-select: none;
+	font-size:12pt;
+}
+
+p, h1, h2, h3, h4, h5, h6, figure {
+	margin:0;
+}
+
+.inline {
+	display:inline;
+}
+
+.inline-blk {
+	display:inline-block;
+}
+
+.blk {
+	display: block;
+}
+
+.hide, .display-none {
+	display:none;
+}
+
+.remove-list-styling {
+	margin: 0;
+	padding: 0;
+}
+.remove-list-styling > li {
+	list-style: none outside none;
+}
+
+.hide-until-login {
+	display: none !important; /*override the javascript*/
+}
+.moderator-only {
+	  display: none;
+}
+
+.dynamic-image {
+	max-width:100%;
+	height:auto;
+}
+
+.shadow, .content-block {
+	box-shadow: 0 0 7px 0 #666;
+}
+
+.external-link, .link, .pointer {
+	cursor: pointer;
+}
+
+.right {
+	float: right;
+}
+
+.center {
+	text-align: center;
+}
+
+.with-fa {
+	font-family: FontAwesome, helvetica, FreeSans, sans-serif;
+}
+
+.center {
+	  text-align: center;
+}
+
+
+.short-number {
+	width: 50px;
+}
+
+
+.align-center-helper {
+	display:inline-block;
+	height:100%;
+	vertical-align: middle;
+}
+
+
+.ltt-content-container {
+	display:inline-block;
+	width:43px;
+	position: relative;
+}
+
+.content-icon {
+	background-color: inherit;
+	position:absolute;
+	top:-30px;
+	border-radius: 14px;
+	z-index: 1;
+	height:38px;
+	width:38px;
+	overflow:hidden;
+	vertical-align: middle;
+	text-align: center;
+}
+
+.content-icon img {
+	vertical-align: middle;
+}
+
+.content-icon span {
+	  position: relative;
+	  top:-5px;
+}
+
+#settings .content-icon span {
+	  top:4px;
+}
+#settings .content-icon span::before {
+	  font-size: 1.3em;
+}
+
+.content-badge {
+	position: absolute;
+	top:-6px;
+	right:10px;
+	padding: 1px 2px 0;
+	border-top:1px black solid;
+	font-size: 0.7em;
+	z-index: 2;
+	font-weight: bold;
+	line-height: 0.9em;
+	text-align: center;
+	width:23px;
+}
+.content-badge.zero {
+	  font-weight: normal;
+}
+.ltt-content-container:hover .content-badge, .ltt-content-container[data-visible="true"] .content-badge {
+	  display: none;
+}
+.ltt-content-container:hover .icon-shadow-helper, .ltt-content-container[data-visible="true"] .icon-shadow-helper {
+	  content: "";
+	  position: absolute;
+	  top: -30px;
+	  border-radius: 14px;
+	  z-index: -1;
+	  height:38px;
+	  width:38px;
+	  box-shadow: 0 0 7px 2px #333;
+	  left:0;
+}
+.ltt-content-container:hover {
+	  z-index: 40 !important;
+}
+
+.hover-content {
+	display: none;
+	position: absolute;
+	width:500px;
+	background-color: inherit;
+	top:-10px;
+	border-radius:14px;
+	border-top-left-radius: 0;
+	padding:5px;
+	box-shadow: 0 0 7px 2px #333;
+}
+.ltt-content-container:hover > .hover-content{
+	display: block;
+}
+#report-content {
+	width: 400px;
+}
+
+.user-img {
+	position: absolute;
+	top:-4px;
+	right: 7px;
+}
+
+.ltt-content-tools {
+	position:absolute;
+	right:10px;
+	top:6px;
+}
+.ltt-content-tools .fa {
+	  font-size: 22px;
+	  position: relative;
+}
+
+.message-blk, .notification-blk, .report-blk {
+	text-align: left;
+	font-size:0.8em;
+	margin:6px 0 0;
+}
+
+.message-blk.unread .notification-title{
+	font-weight: 900;
+}
+.message-blk.unread p {
+	font-weight: 600;
+}
+
+.message-blk.unread, .notification-blk.unread {
+	background-color: rgba(255,255,255,0.4);
+}
+
+.notification-blk.unread .notification-title, .message-blk .notification-title {
+	font-weight: bold;
+}
+.notification-blk p {
+	display:inline;
+	margin-left: 5px;
+}
+.last-unread {
+	border-bottom: 2px dotted #000;
+}
+
+.load-more {
+	text-align:center;
+	font-weight:bold;
+	margin-top:4px;
+	font-size: 0.9em;
+}
+
+.notification-header {
+	padding-bottom: 4px;
+	margin-bottom: 0;
+	border-bottom: 1px solid black;
+	padding-left:30px;
+}
+
+.error-content {
+	margin:5px 0;
+	display:none;
+}
+
+.report-blk {
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.toggle {
+	height:11px;
+	position:absolute;
+	right:10px;
+	width:27px;
+	transition: 0.2s linear all;
+}
+.toggle::after {
+	background-color: red;
+	content: "";
+	height:13px;
+	position:absolute;
+	right:14px;
+	width:13px;
+    top:-1px;
+	transition:0.2s linear all;
+}
+input[type="checkbox"]:checked ~ .toggle::after {
+	background-color:green;
+	right:0;
+}
+input[type="checkbox"]:disabled ~ .toggle::after {
+    background-color:#696969;
+}
+
+#quick-settings .QCContent {
+    border-left: 3px solid red;
+    background-color:rgba(255,0,0,0.2);
+    transition: 0.2s all;
+}
+#quick-settings input[type="checkbox"]:checked ~ .QCContent {
+    border-left-color: green;
+    background-color:rgba(0,255,0,0.2);
+}
+
+.expand-button{
+	margin-left:5px;
+}
+.expand-button > img {
+	vertical-align: middle;
+	transition: 0.3s linear transform, 0.2s linear background-color;
+}
+.expand-button .fa {
+	  transition: 0.3s linear all;
+}
+.expand-button[data-expanded="true"] > img {
+	transform: rotate(90deg);
+}
+.expand-content {
+	margin-left: 5px;
+	position:relative;
+	right:-5px;
+}
+
+.settings-right {
+	position:absolute;
+	right:10px;
+}
+
+.content-warning {
+	background-color: #ff4848;
+	padding-top: 2px;
+	text-align: center;
+}
+
+.load-more.disabled {
+	opacity: 0.5;
+	text-decoration: line-through;
+	cursor: not-allowed;
+}
+
+.handle {
+	font-weight:700;
+	margin-right:2px;
+	cursor:grab;
+}
+.handle.fa::before {
+	  font-size:0.9em;
+	  color:#666;
+	  position: relative;
+	  top:-1px;
+}
+.sortable-placeholder {
+	height:25px !important;
+	background-color: #eee;
+}
+.sortable > li:not(.not-sortable) {
+	height:25px;
+	font-size:0.9em;
+}
+
+.preview {
+	  padding-bottom: 5px;
+}
+
+
+#header {
+	height:50px;
+	display: flex;
+	position: relative;
+	margin: 8px 8px 0;
+}
+
+#branding-right {
+	position: absolute;
+	right: 5px;
+}
+
+#branding {
+	width:225px;
+	overflow:hidden;
+	top:6px;
+	position: relative;
+}
+
+#user {
+	position: relative;
+	top:-10px;
+	padding-right:12px;
+	border-right:2px solid black;
+	height:31px;
+	flex:1 1 auto;
+}
+
+#ltt-content-block {
+	position:absolute;
+	left:12px;
+	top:20px;
+}
+
+#username {
+	font-size:1.6em;
+	margin-right:43px;
+}
+
+#errors {
+	background-color:#ff2f2f;
+	z-index:12;
+}
+#messages {
+	background-color:#37c2e8;
+	z-index: 15;
+}
+#notifications {
+	background-color:#a6ce4c;
+	z-index: 14;
+}
+#reports {
+	background-color: #FC6D35;
+	z-index: 13;
+}
+#settings {
+	background-color: #e5c645;
+	z-index: 16;
+}
+
+#errors[data-num='0']{
+	display:none;
+}
+
+#messages .content-icon > img {
+	position:relative;
+	top:3px;
+}
+
+#settings-content {
+	width:350px;
+}
+
+#ERR_INTERNAL {
+	margin-bottom: 0;
+}
+#ERR_INTERNAL-DETAILS {
+	margin: 0;
+	padding-left: 3px;
+}
+
+.data-block {
+	overflow-y: auto;
+}
+
+
+
+article {
+	display: flex;
+	margin:5px 8px;
+}
+
+article > div {
+	height:auto;
+	display:inline-block;
+	margin:8px 5px;
+	width:180px;
+}
+
+.content-block {
+	text-align: center;
+	position: relative;
+}
+
+.wide-content-block {
+	width:300px;
+	padding:0;
+}
+.wide-content-block > h3 {
+	margin-bottom:10px;
+}
+
+.content-block .ltt-content-tools {
+	  top:3px;
+}
+.content-block .ltt-content-tools .fa {
+	  font-size:1em;
+	  top:0;
+}
+
+.ltt-content-block {
+    overflow-x: hidden;
+}
+
+.ltt-content-block  > div {
+    max-height: 370px;
+    overflow-y: auto;
+    overflow-x: auto;
+    width: 100%;
+    position: relative;
+}
+
+.ltt-panel-content-block {
+	text-align: left;
+	font-size: 0.8em;
+	padding: 1px 3px;
+	margin: 0px 0;
+}
+
+.thumbnail {
+	max-width:100%;
+	height:auto;
+	display:block;
+}
+
+.yt-channel-logo-container {
+	height: 30px;
+	margin: 2px 0 3px;
+	vertical-align: middle;
+}
+
+.yt-channel-logo {
+	max-height:30px;
+}
+
+.youtube figcaption {
+	font-size:0.8em;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	overflow: hidden;
+	margin-bottom: 5px;
+}
+
+.twitch-block {
+	min-height: 40px;
+	padding:0 5px 5px;
+	text-align:left;
+}
+.twitch-title {
+	vertical-align: top;
+	font-weight: bold;
+	font-size:0.7em;
+	display:block;
+	line-height:1;
+}
+.twitch-img {
+	float:left;
+	margin-right: 3px;
+}
+.twitch-live-now {
+	display:block;
+	font-size: 0.95em;
+	font-weight: bold;
+	line-height: 1.1;
+}
+
+.secondary-block {
+	margin-top: 10px;
+}
+
+.content-block .unread {
+	font-weight: bold;
+	border-right: 3px solid #db4105;
+	box-shadow: -11px 0 6px -7px #db4105 inset;
+}
+.content-block .unread .from {
+	font-weight: normal;
+}
+
+
+#WAN {
+	position: relative;
+}
+#WAN:not(.online) > img {
+	opacity: 0.6;
+}
+#WAN:not(.online) > .status {
+	font-size: 1.5em;
+	font-weight: bold;
+	left:2%;
+	top:16px;
+	pointer-events: none;
+	position: absolute;
+	width:100%;
+	text-shadow: white 0 0 2px;
+}
+#WAN.online > .status {
+	display:block;
+	font-size:0.75em;
+	font-weight: bold;
+	line-height: 1;
+}
+
+#copy-debug {
+	position: relative;
+	top:3px;
+}
+
+footer {
+	margin: 0 8px 8px;
+	font-size: 0.8em;
+	text-align: center;
+}
+footer > div > span {
+	  padding: 0 4px;
+}
+footer > div > span:not(:last-child){
+	  border-right: 1px solid black;
+}
+
+.overlay-content {
+	  display: none;
+	  margin: 0 auto; /* center it on the page */
+	  padding: 5px 10px;
+	  position: relative;
+	  border-radius: 8px;
+}
+
+#full-overlay {
+	position: absolute;
+	top:0;
+	left:0;
+	width:100%;
+	height:100%;
+	z-index:999999;
+	display: none;
+}
+
+#settings-overlay {
+	width:500px;
+	top:calc(50% - 175px);
+	height:350px;
+}
+#settings-overlay > div {
+	display:flex;
+	margin-top: 5px;
+}
+#settings-overlay p {
+	  font-size:0.8em;
+}
+.settings-left-pane {
+	width:220px;
+	z-index: 1;
+}
+.settings-left-pane .setting-container {
+	position: absolute;
+	clip: rect(-20px, 220px, 40px,-20px); /*Cut off the shadow*/
+	width: 217px;
+	padding:0.2em 0 0.2em 3px;
+}
+.settings-left-pane .setting-container.active {
+	background-color: white;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px;
+}
+.setting-helper {
+	height:2em;
+	position:relative;
+}
+.settings-right-pane {
+	width: 280px;
+	position: relative;
+}
+.settings-more-pane {
+	border-radius: 5px;
+	display:none;
+}
+.settings-more-pane.first {
+	border-top-left-radius: 0;
+}
+.settings-more-pane.last {
+	border-bottom-left-radius: 0;
+}
+#settings-tutorial {
+	color: #999;
+	font-size: 0.8em;
+	position: absolute;
+}
+.settings-more-pane {
+	background-color: white;
+	position: relative;
+	height: 300px;
+	overflow-y:auto;
+	padding:3px 0 3px 8px;
+}
+.setting-details {
+	font-size: 0.8em;
+	text-align: center;
+	margin-bottom: 3px;
+	color: #777;
+}
+.setting-more-info {
+	  margin-left: 5px;
+}
+.setting-more-info .info-content {
+	  background-color: white;
+	  border: 2px solid #db4105;
+	  border-radius: 8px;
+	  display: none;
+	  left:20px;
+	  margin-top: 3px;
+	  padding: 2px 5px;
+	  position: absolute;
+	  width: 220px;
+	  font-size: 0.8em;
+	  z-index: 100;
+}
+.setting-more-info:hover .info-content {
+	  display: block;
+}
+
+.settings-more-pane .setting-container {
+	display:block;
+	font-size: 0.9em;
+}
+.settings-left-pane .toggle {
+	margin:4px 0;
+}
+.settings-right-pane .toggle {
+	margin: 3px 0;
+}
+.setting-img {
+	position:relative;
+}
+.setting-name {
+	position:relative;
+}
+
+.settings-right-pane select {
+	  position: absolute;
+	  right:10px;
+}
+
+.settings-right-pane label {
+	  padding: 3px 0;
+}
+
+.overlay-close-btn {
+	  position: absolute;
+	  right:10px;
+	  top:0;
+}
+.overlay-close-btn::before {
+	  color:#666;
+	  font-size:1.4em;
+}
+.overlay-close-btn:hover::before {
+	  color:black;
+}
+
+#welcome-message {
+	  width: 425px;
+	  top:calc(50% - 150px);
+	  height: 300px;
+	  font-size: 0.9em;
+	  line-height:1.6em;
+}
+.welcome-page {
+	  border-top: 1px solid #999;
+	  margin-top: 3px;
+}
+#welcome-message .toggle {
+	  margin-top: 6px;
+}
+#welcome-message .description {
+	  line-height: normal;
+	  display: block;
+	  font-size:0.85em;
+	  padding-bottom: 4px;
+}
+
+#welcome-controls {
+	  position: absolute;
+	  bottom:10px;
+	  display: flex;
+	  width: calc(100% - 20px);
+}
+#welcome-controls > button {
+	  flex: 1 1 auto;
+	  margin: 0 10px;
+}
+
+#debug-confirmation-dialog {
+	  width:350px;
+	  height: auto;
+	  background-color:white;
+	  top: calc(50% - 75px);
+	  z-index: 9999999;
+	  position:absolute;
+	  font-size: 0.9em;
+	  left:calc(50% - 175px);
+}
+#debug-confirmation-buttons {
+	  display: flex;
+	  justify-content: space-around;
+	  margin-top: 8px;
+}
+#debug-confirmation-buttons > span {
+	  border-radius: 4px;
+	  padding:2px 20px;
+	  text-align: center;
+}
+
+
+/*Narrow mode*/
+.narrow #branding, .narrow #branding > img{
+	height:25px;
+	width:137px;
+	display: block;
+}
+.narrow #user, .super-narrow #user {
+	border:none;
+	height:13px;
+	position: absolute;
+	left:0;
+	top:36px;
+}
+.narrow #user > .user-img, .super-narrow #user > .user-img{
+	display: none;
+}
+.narrow #username, .super-narrow #username {
+	font-size: 1.15em;
+	margin:0;
+	position: relative;
+	top:-8px;
+}
+.narrow .hover-content{
+	top:8px;
+}
+.narrow .ltt-content-container .ltt-content-tools {
+	right: 10px;
+}
+.narrow .ltt-content-container[data-visible="true"] {
+	z-index:25 !important;
+}
+.narrow .ltt-content-container:hover {
+	  z-index: 26 !important;
+}
+.narrow .ltt-content-container:not(#settings):hover .content-icon, .narrow .ltt-content-container:not(#settings)[data-visible="true"] .content-icon {
+	border-bottom-left-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom: 0 none;
+}
+.narrow .hover-content {
+	  border-radius: 14px;
+}
+.narrow footer > div > span, .tmp-narrow footer > div > span {
+	  display: block;
+	  border:none;
+}
+
+/*OSX specific styles (for when standards aren't enough)*/
+.OSX #ltt-content-block {
+	  top: 22px;
+}
+.OSX #user {
+	  top: -15px;
+}
+.OSX #WAN:not(.online) > .status {
+	  top: 20px;
+}
+.OSX .content-icon span {
+	  top: -6px;
+}
+.OSX #settings .content-icon span {
+	  top: 3px;
+}
+.OSX:not(.narrow) #username {
+	  top: 3px;
+	  position:relative;
+}
+.OSX.narrow #username {
+	  top:45px;
+}

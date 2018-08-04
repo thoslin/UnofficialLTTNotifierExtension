@@ -1,0 +1,49 @@
+/*
+Part of the LinusTechTips Notification Firefox Extension
+Licensed under the Creative Commons Attribution 4.0 International license, which can be found at http://creativecommons.org/licenses/by/4.0/deed.en_GB
+Created by colonel_mortis on the linus tech tips forum
+View the thread at http://linustechtips.com/main/topic/105653-firefox-extensionunofficialsoon-linus-tech-tips-notifier/ 
+*/
+
+body {
+	background-color:#eee;
+	color:black;
+}
+
+#header {
+	background-color:white;
+}
+
+
+.youtube figcaption {
+	background-color: #eee;
+}
+
+.content-block {
+	background-color: white;
+}
+
+.toggle {
+	background-color:#c4c2c3;
+}
+
+.dropdown {
+	background-color:#ccc;
+	border-color: #aaa;
+}
+
+.expand-button:hover > img {
+	background-color: rgba(255, 255, 255, 0.8);
+}
+
+span.external-link:not(.fa):not(#WAN), #username {
+	color: #00226B;
+}
+
+#full-overlay {
+	background-color:rgba(255,255,255,0.7);
+}
+
+.overlay-content {
+	background-color: rgba(255, 255,255,0.8);
+}
