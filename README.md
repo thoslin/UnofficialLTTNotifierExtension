@@ -62,6 +62,14 @@ Portions of this work are licensed under Creative Commons 4.0 . In cases where w
 * Fix Bugs
 * Publish Extension
 
+## Differences between this and Colonel_Mortis' Unofficial LTT Notifier
+
+Here are some of the differences:
+* We've updated the TimeAgo plugin to the latest version
+* We've updated to the latest version of FontAwesome
+* We've updated to the latest version of jQuery
+* This extension is compatible with Modern Web Browsers like FireFox 57+ since it was re-designed from the ground up for it.
+
 ## Join Our Extension's Discord.
 Want to talk to us?
 
