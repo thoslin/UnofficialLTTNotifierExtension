@@ -56,11 +56,13 @@ Portions of this work are licensed under Creative Commons 4.0 . In cases where w
 * Implement browser notifications if user receives PM
 * Implement browser notifications for activity such as status updates.
 * Implement browser notifications for when WAN Show starts using Twitch APIs.
-* Create Privacy Policy
 * Create Terms Of Service
 * Test extension to see if working
 * Fix Bugs
 * Publish Extension
+
+### Already Done
+* Create Privacy Policy
 
 ## Differences between this and Colonel_Mortis' Unofficial LTT Notifier
 
