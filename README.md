@@ -31,13 +31,13 @@ not as in “free beer”. We sometimes call it “libre software,” borrowing 
     The freedom to redistribute copies so you can help others (freedom 2).
     The freedom to distribute copies of your modified versions to others (freedom 3). By doing this you can give the whole community a chance to benefit from your changes. Access to the source code is a precondition for this.
 
-[Source](https://www.gnu.org/philosophy/free-sw.html).
+[Source/Credit](https://www.gnu.org/philosophy/free-sw.html).
 
 Portions of this work are licensed under Creative Commons 4.0 . In cases where we use other source code from open source software we will also include license information for those in separate license files. If a project's license is available in multiple languages, the English version shall prevail.
 
 ## Platforms we're planning on supporting
-* Mozilla FireFox 57+
-* Microsoft Edge (Windows 10 Desktop only) 40+
+* Mozilla FireFox 57+ (Desktop and Android)
+* Microsoft Edge 40+ (Windows 10 Desktop only)
 * Modern versions of Google Chrome & Chromium
 
 ## Contributing to this project
@@ -46,18 +46,33 @@ Portions of this work are licensed under Creative Commons 4.0 . In cases where w
 * A supported browser to test on.
 * A text or code editor. We recommend [Atom](https://atom.io) or [VS Code](https://code.visualstudio.com).
 * A Git client. We use [GitHub Desktop](https://desktop.github.com).
-* A Linus Tech Tips Forum Account (Optional) - Required for some features.
+* A Linus Tech Tips Forum Account (Optional) - Required for most features.
 
 ## To Do
 * Create popup UI
 * Create Settings UI
-* Implement Settings Persistent Storage using WebStorage APIs
+* Implement Settings Persistent Storage using WebStorage APIs - Working On This
 * Implement login system of sorts
 * Implement browser notifications if user receives PM
 * Implement browser notifications for activity such as status updates.
 * Implement browser notifications for when WAN Show starts using Twitch APIs.
-* Create Privacy Policy
 * Create Terms Of Service
 * Test extension to see if working
 * Fix Bugs
 * Publish Extension
+
+### Already Done
+* Create Privacy Policy
+
+## Differences between this and Colonel_Mortis' Unofficial LTT Notifier
+
+Here are some of the differences:
+* We've updated the TimeAgo plugin to the latest version
+* We've updated to the latest version of FontAwesome
+* We've updated to the latest version of jQuery
+* This extension is compatible with Modern Web Browsers like FireFox 57+ since it was re-designed from the ground up for it.
+
+## Join Our Extension's Discord.
+Want to talk to us?
+
+We have our own discord server :P . Here's our [invite link](https://discord.gg/WWwfXF8)
