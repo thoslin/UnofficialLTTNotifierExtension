@@ -1,14 +1,16 @@
 ## AluminiumTech's Unofficial LTT Notifier Privacy Policy
 
-Version: v1808.0
+Version: v18.08.1
 
-Last Edited: August 5th 2018
+Last Edited: August 16th 2018
 
-Effective Date: August 5th 2018
+Effective Date: August 16th 2018
 
 This privacy policy governs how the Author and Contributors ("developers", "we", "us") of this Web Browser Extension collect, use, maintain, and disclose information collected from its users (individually, "you") of AluminiumTech's Unofficial LTT Notifier.
 
 This privacy policy affects all products and services offered by us.
+
+This privacy policy does not cover your usage of Linus Tech Tips ("https://www.linustechtips.com").
 
 ## Personally Identifiable information
 We do not collect personally identifiable information.
