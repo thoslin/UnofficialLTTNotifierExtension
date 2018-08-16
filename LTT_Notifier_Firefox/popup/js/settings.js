@@ -10,3 +10,7 @@ function SetupSettings(){
   //
   localStorage.set("", "");
 }
+
+function ModifySettings(){
+
+}
