@@ -10,7 +10,7 @@ This file is for the layout of the panel
 
 body {
 	font-family:helvetica, FreeSans, sans-serif;
-	min-width:350px;
+	min-width:300px;
 	position:absolute;
 	margin:0;
 	-moz-user-select: none;
