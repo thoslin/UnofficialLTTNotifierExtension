@@ -36,9 +36,13 @@ not as in “free beer”. We sometimes call it “libre software,” borrowing 
 Portions of this work are licensed under Creative Commons 4.0 . In cases where we use other source code from open source software we will also include license information for those in separate license files. If a project's license is available in multiple languages, the English version shall prevail.
 
 ## Platforms we're planning on supporting
-* Mozilla FireFox 57+ (Desktop and Android)
-* Microsoft Edge 40+ (Windows 10 Desktop only)
-* Modern versions of Google Chrome & Chromium
+* Mozilla FireFox (Desktop and Android)
+* Microsoft Edge (Windows 10 Desktop only)
+* Chromium/Google Chrome (Desktop only)
+
+| Extension Version | Mozilla Firefox | Chromium/Google Chrome | Microsoft Edge | Brave Browser |
+|----|------|-----|---|------|
+| v0.1 | 60.0 ESR/60.0 Stable | 68.0 | 42.0.17134 | - |
 
 ## Contributing to this project
 
@@ -48,31 +52,18 @@ Portions of this work are licensed under Creative Commons 4.0 . In cases where w
 * A Git client. We use [GitHub Desktop](https://desktop.github.com).
 * A Linus Tech Tips Forum Account (Optional) - Required for most features.
 
-## To Do
-* Create popup UI
-* Create Settings UI
-* Implement Settings Persistent Storage using WebStorage APIs - Working On This
-* Implement login system of sorts
-* Implement browser notifications if user receives PM
-* Implement browser notifications for activity such as status updates.
-* Implement browser notifications for when WAN Show starts using Twitch APIs.
-* Create Terms Of Service
-* Test extension to see if working
-* Fix Bugs
-* Publish Extension
+## To Do 
+See our [Trello Page](https://trello.com/b/jZdXt8h7).
 
-### Already Done
-* Create Privacy Policy
-
-## Differences between this and Colonel_Mortis' Unofficial LTT Notifier
+## What are the key differences between this and Colonel_Mortis' Unofficial LTT Notifier?
 
 Here are some of the differences:
 * We've updated the TimeAgo plugin to the latest version
 * We've updated to the latest version of FontAwesome
 * We've updated to the latest version of jQuery
-* This extension is compatible with Modern Web Browsers like FireFox 57+ since it was re-designed from the ground up for it.
+* This extension is compatible with Modern Web Browsers like FireFox 60+ since it was re-designed from the ground up for it.
 
 ## Join Our Extension's Discord.
 Want to talk to us?
 
-We have our own discord server :P . Here's our [invite link](https://discord.gg/WWwfXF8)
+We have a discord server. Here's our [invite link](https://discord.gg/WWwfXF8)
