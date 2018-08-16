@@ -67,7 +67,8 @@ Stuff I've changed:
 					</div>
 				</div>
 			</div>
-			<!--div class="ltt-content-container moderator-only hide-until-login" id="reports">
+			<!-- Moderator only info -->
+			<div class="ltt-content-container moderator-only hide-until-login" id="reports">
 				<span class="icon-shadow-helper"></span>
 				<span class="content-icon"><span class="fa fa-exclamation-triangle fa-lg pointer"></span><span class="align-center-helper"></span></span>
 				<span class="content-badge num-reports">?</span>
@@ -80,10 +81,11 @@ Stuff I've changed:
 						<span class="fa fa-warning"></span> This information may be out of date - LTT seems to be down
 					</div>
 					<div class="report-data-block data-block" data-next-index="10">
-						<!--Report data gets placed here-- >
+						<!--Report data gets placed here-->
 					</div>
 				</div>
-			</div-->
+			</div>
+
 			<div class="ltt-content-container" id="errors" data-num="0" data-num-internal="0">
 				<span class="icon-shadow-helper"></span>
 				<span class="content-icon"><span class="fa fa-times-circle fa-lg pointer"></span><span class="align-center-helper"></span></span>
@@ -150,11 +152,6 @@ Stuff I've changed:
 					<span class="twitch-title">ERROR</span>
 				</div>
 			</div>
-			<div id="tools" class="content-block secondary-block">
-				<h3>Tools</h3>
-				<div class="switch-to-ltt pointer">Switch to LTT tab</div>
-				<div class="new-ltt pointer">New LTT Tab</div>
-			</div>
 			<div id="quick-settings" class="secondary-block content-block">
 				<h3>Quick Settings</h3>
 				<div>
@@ -175,18 +172,14 @@ Stuff I've changed:
 	</article>
 	<footer>
 		<div class="inline-blk">
-			<span class="external-link" data-url="https://linustechtips.com/main/topic/105653-unofficial-linus-tech-tips-notifier-for-firefox/">LTT Notifier for Firefox - v<span class="version">??</span></span>
+			<span><a href="">AluminiumTech's Unofficial LTT Notifier for Firefox - v</a><span class="version">??</span></span>
 			<span>Developed by <a href="https://linustechtips.com/main/profile/89336-aluminiumtech/">AluminiumTech</a></span>
 			<span>Based on Code written by <a href="https://linustechtips.com/main/profile/10813-colonel-mortis/">Colonel_Mortis</a></span>
 			<span>Based on UI design by <a href="https://linustechtips.com/main/profile/44947-amorassofpixelz/">AMorassOfPixelz</a></span>
 		</div>
 	</footer>
 
-
-
 	<!-------------------------------------------------------------------->
-
-
 
 	<section id="full-overlay">
 		<div id="debug-confirmation-dialog" class="shadow overlay-content">
@@ -204,23 +197,12 @@ Stuff I've changed:
 						<label class="pointer blk">Forum Notifications<input type="checkbox" class="display-none setting" data-setting="ltt.notifications"><span class="toggle"></span></label>
 						<label class="pointer blk">Forum Messages<input type="checkbox" class="display-none setting" data-setting="ltt.messages"><span class="toggle"></span></label>
 						<label class="pointer blk moderator-only">Reports<input type="checkbox" class="display-none setting" data-setting="ltt.reports"><span class="toggle"></span></label>
-						<label class="pointer blk">New LinusTechTips videos<input type="checkbox" class="display-none setting" data-setting="youtube.ltt"><span class="toggle"></span></label>
-						<label class="pointer blk">New Tech Quickie videos<input type="checkbox" class="display-none setting" data-setting="youtube.tq"><span class="toggle"></span></label>
-						<label class="pointer blk">New Channel Superfun videos<input type="checkbox" class="display-none setting" data-setting="youtube.csf"><span class="toggle"></span></label>
-						<label class="pointer blk">Linus' livestreams (including the WAN show)<input type="checkbox" class="display-none setting" data-setting="twitch.LinusTech"><span class="toggle"></span></label>
-						<label class="pointer blk">Luke's livestreams<input type="checkbox" class="display-none setting" data-setting="twitch.Luke_Lafr"><span class="toggle"></span></label>
 				</div>
 				<div class="welcome-page hide" data-page="2">
 						<h4>Which widgets would you like to be shown on this page?</h4>
 						<!--Enable and disable panels-->
-						<label class="pointer blk">YouTube - LinusTechTips<input type="checkbox" class="display-none setting" data-setting="panel.yt-ltt"><span class="toggle"></span></label>
-						<label class="pointer blk">YouTube - TechQuickie<input type="checkbox" class="display-none setting" data-setting="panel.yt-tq"><span class="toggle"></span></label>
-						<label class="pointer blk">YouTube - Channel Superfun<input type="checkbox" class="display-none setting" data-setting="panel.yt-csf"><span class="toggle"></span></label>
 						<label class="pointer blk">LTT - Notifications<input type="checkbox" class="hide setting" data-setting="panel.ltt-notifications"><span class="toggle"></span></label>
 						<label class="pointer blk">LTT - Messages<input type="checkbox" class="hide setting" data-setting="panel.ltt-messages"><span class="toggle"></span></label>
-						<label class="pointer blk">Twitch<input type="checkbox" class="display-none setting" data-setting="panel.twitch"><span class="toggle"></span></label>
-						<label class="pointer blk">Tools<input type="checkbox" class="display-none setting" data-setting="panel.tools"><span class="toggle"></span></label>
-						<label class="pointer blk">Quick Settings<input type="checkbox" class="display-none setting" data-setting="panel.quick-settings"><span class="toggle"></span></label>
 				</div>
 				<div class="welcome-page hide" data-page="3">
 						<!--Miscellaneous settings-->
@@ -396,24 +378,6 @@ Stuff I've changed:
 									  <option value="">none</option>
 								</select>
 							</li>
-							<li><span class="handle fa fa-sort"></span>New Upload to YouTube
-								<select class="setting with-fa" data-setting="sound.youtube">
-									  <option value="notification-1.mp3">&#xf028; 1</option>
-									  <option value="notification-2.mp3">&#xf028; 2</option>
-									  <option value="notification-3.mp3">&#xf028; 3</option>
-									  <option value="notification-4.mp3">&#xf028; 4</option>
-									  <option value="">none</option>
-								</select>
-							</li>
-							<li><span class="handle fa fa-sort"></span>Linus goes live on Twitch
-								<select class="setting with-fa" data-setting="sound.twitch">
-									  <option value="notification-1.mp3">&#xf028; 1</option>
-									  <option value="notification-2.mp3">&#xf028; 2</option>
-									  <option value="notification-3.mp3">&#xf028; 3</option>
-									  <option value="notification-4.mp3">&#xf028; 4</option>
-									  <option value="">none</option>
-								</select>
-							</li>
 							<li><span class="handle fa fa-sort"></span>A forum error occurs
 								<select class="setting with-fa" data-setting="sound.error">
 									  <option value="notification-1.mp3">&#xf028; 1</option>
@@ -448,43 +412,12 @@ Stuff I've changed:
 						<label class="setting-container pointer moderator-only">New report
 							<input type="checkbox" class="display-none setting" data-setting="popup.reports"><span class="toggle"></span>
 						</label>
-						<label class="setting-container pointer">New upload to YouTube
-							<input type="checkbox" class="display-none setting" data-setting="popup.youtube"><span class="toggle"></span>
-						</label>
-						<label class="setting-container pointer">Linus or Luke go live on Twitch
-							<input type="checkbox" class="display-none setting" data-setting="popup.twitch"><span class="toggle"></span>
-						</label>
 						<label class="setting-container pointer">The forum goes offline
 							<input type="checkbox" class="display-none setting" data-setting="popup.error"><span class="toggle"></span>
 						</label>
 						<label class="setting-container pointer">The forum comes back online
 							<input type="checkbox" class="display-none setting" data-setting="popup.uptime"><span class="toggle"></span>
 						</label>
-					</div>
-					<div class="shadow settings-more-pane" data-adv-setting="youtube">
-						<p class="setting-details">Check for new uploads to LinusMediaGroup's YouTube channels</p>
-						<label class="setting-container pointer">LinusTechTips
-							<input type="checkbox" class="display-none setting" data-setting="youtube.ltt" data-child-settings="panel.yt-ltt"><span class="toggle"></span>
-						</label>
-						<label class="setting-container pointer">TechQuickie
-							<input type="checkbox" class="display-none setting" data-setting="youtube.tq" data-child-settings="panel.yt-tq"><span class="toggle"></span>
-						</label>
-						<label class="setting-container pointer">Channel Superfun
-							<input type="checkbox" class="display-none setting" data-setting="youtube.csf" data-child-settings="panel.yt-csf"><span class="toggle"></span>
-						</label>
-						<label class="setting-container">Update every
-							<input type="number" class="short-number setting" data-setting="updateTime.yt" min="1"> minute(s)</label>
-					</div>
-					<div class="shadow settings-more-pane" data-adv-setting="twitch">
-						<p class="setting-details">Check whether LinusMediaGroup are live on Twitch</p>
-						<label class="setting-container pointer">LinusTech
-							<input type="checkbox" class="display-none setting" data-setting="twitch.LinusTech"><span class="toggle"></span>
-						</label>
-						<label class="setting-container pointer">luke_lafr
-							<input type="checkbox" class="display-none setting" data-setting="twitch.Luke_Lafr"><span class="toggle"></span>
-						</label>
-						<label class="setting-container">Update every
-							<input type="number" class="short-number setting" data-setting="updateTime.twitch" min="1"> minute(s)</label>
 					</div>
 					<div class="shadow settings-more-pane" data-adv-setting="forum">
 						<p class="setting-details">Check for new notifications and personal messages on the forum</p>
@@ -520,29 +453,11 @@ Stuff I've changed:
 					</div>
 					<div class="shadow settings-more-pane" data-adv-setting="ui">
 						<p class="setting-details">Customise the widgets in the user interface<br/>If disabled here, you can still get desktop notifications and sounds</p>
-						<label class="setting-container pointer">YouTube - LinusTechTips
-							<input type="checkbox" class="display-none setting" data-setting="panel.yt-ltt"><span class="toggle"></span>
-						</label>
-						<label class="setting-container pointer">YouTube - TechQuickie
-							<input type="checkbox" class="display-none setting" data-setting="panel.yt-tq"><span class="toggle"></span>
-						</label>
-						<label class="setting-container pointer">YouTube - Channel Superfun
-							<input type="checkbox" class="display-none setting" data-setting="panel.yt-csf"><span class="toggle"></span>
-						</label>
 						<label class="setting-container pointer">LTT - Messages
 							<input type="checkbox" class="display-none setting" data-setting="panel.ltt-messages"><span class="toggle"></span>
 						</label>
 						<label class="setting-container pointer">LTT - Notifications
 							<input type="checkbox" class="display-none setting" data-setting="panel.ltt-notifications"><span class="toggle"></span>
-						</label>
-						<label class="setting-container pointer">Twitch
-							<input type="checkbox" class="display-none setting" data-setting="panel.twitch"><span class="toggle"></span>
-						</label>
-						<label class="setting-container pointer">Tools
-							<input type="checkbox" class="display-none setting" data-setting="panel.tools"><span class="toggle"></span>
-						</label>
-						<label class="setting-container pointer">Quick Settings
-							<input type="checkbox" class="display-none setting" data-setting="panel.quick-settings"><span class="toggle"></span>
 						</label>
 					</div>
 					<div class="shadow settings-more-pane" data-adv-setting="debug">
@@ -550,18 +465,6 @@ Stuff I've changed:
 						then <span class="external-link" data-url="https://linustechtips.com/main/topic/105653-linus-tech-tips-notifier-for-firefox/#replyForm">post it in the thread</span>
 						or <span class="external-link" data-url="https://linustechtips.com/main/messenger/compose/?to=10813">send me a PM</span>.
 						Make sure you include a detailed explanation of your issue.</p>
-					</div>
-					<div class="shadow settings-more-pane hide" data-adv-setting="advanced">
-						<p class="setting-details">You probably don't need to change these</p>
-						<label class="setting-container pointer">Soon?
-							<input type="checkbox" class="display-none setting" data-setting="" disabled><span class="toggle"></span>
-						</label>
-					</div>
-					<div class="shadow settings-more-pane last" data-adv-setting="accessibility">
-						<p class="setting-details">Accessibility options</p>
-						<label class="setting-container pointer">Soon?
-							<input type="checkbox" class="display-none setting" data-setting=""><span class="toggle"></span>
-						</label>
 					</div>
 				</div>
 			</div>
