@@ -39,6 +39,7 @@ Portions of this work are licensed under Creative Commons 4.0 . In cases where w
 * Mozilla FireFox (Desktop and Android)
 * Microsoft Edge (Windows 10 Desktop only)
 * Chromium/Google Chrome (Desktop only)
+* Potentially Brave Browser (Desktop only)
 
 | Extension Version | Mozilla Firefox | Chromium/Google Chrome | Microsoft Edge | Brave Browser |
 |----|------|-----|---|------|
