@@ -1,6 +1,6 @@
 ## AluminiumTech's Unofficial LTT Notifier Terms of Service
 
-Version: v18.09
+Version: v18.09.1
 
 Last Edited: 10th September 2018
 
@@ -8,10 +8,15 @@ Effective Date: 10th September 2018
 
 ## Definitions
 Author and Contributors - "developers" "we", "us"
+
 Users - individually, "you"
+
 Unofficial LTT Notifier - "product", "project", "service", "extension", "application"
+
 Terms of Service - "terms", "terms of service"
+
 LinusTechTips.com Forum Community Standards - "community standards", "guidelines", "rules", "code of conduct", "community guidelines", "standards"
+
 Any product offered by developers - "services", "products", "projects", "collections"
 
 ## Introduction
