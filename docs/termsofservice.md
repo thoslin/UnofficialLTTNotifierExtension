@@ -7,7 +7,7 @@ Last Edited: 10th September 2018
 Effective Date: 10th September 2018
 
 ## Definitions
-Author and Contributors - "developers" "we", "us"
+Author and Contributors - "developers", "authors", "contributors, "we", "us"
 
 Users - individually, "you"
 
