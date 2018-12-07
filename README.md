@@ -48,7 +48,7 @@ Portions of this work are licensed under Creative Commons 4.0 . In cases where w
 
 ### Requirements
 * A supported browser to test on.
-* A text or code editor. We recommend [Atom](https://atom.io) or [VS Code](https://code.visualstudio.com).
+* A text or code editor. We recommend [Atom](https://atom.io).
 * A Git client. We use [GitHub Desktop](https://desktop.github.com).
 * A Linus Tech Tips Forum Account (Optional) - Required for most features.
 
@@ -61,7 +61,7 @@ Here are some of the differences:
 * We've updated the TimeAgo plugin to the latest version
 * We've updated to the latest version of FontAwesome
 * We've updated to the latest version of jQuery
-* This extension is compatible with Modern Web Browsers like FireFox 60+ since it was re-designed from the ground up for it.
+* This extension is compatible with Modern Web Browsers like FireFox 60+ since it was re-designed for it.
 
 ## Join Our Extension's Discord.
 Want to talk to us?
