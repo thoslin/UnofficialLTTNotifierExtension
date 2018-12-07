@@ -37,13 +37,12 @@ Portions of this work are licensed under Creative Commons 4.0 . In cases where w
 
 ## Platforms we're planning on supporting
 * Mozilla FireFox (Desktop and Android)
-* Microsoft Edge (Windows 10 Desktop only)
 * Chromium/Google Chrome (Desktop only)
-* Potentially Brave Browser (Desktop only)
+* Next Generation Brave Browser (Desktop only)
 
 | Extension Version | Mozilla Firefox | Chromium/Google Chrome | Microsoft Edge | Brave Browser |
 |----|------|-----|---|------|
-| v0.1 | 60.0 ESR/60.0 Stable | 68.0 | 42.0.17134 | - |
+| v0.1 | 60.0 ESR/60.0 Stable | 68.0 | - | 0.56.12 |
 
 ## Contributing to this project
 
