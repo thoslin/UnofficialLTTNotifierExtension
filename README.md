@@ -37,7 +37,7 @@ Here are some of the differences:
 * We've updated to the latest version of jQuery
 * This extension is compatible with Modern Web Browsers like FireFox 60+ since it was re-designed for it.
 
-## Join Our Extension's Discord.
+## Join Our Extension's Gitter.
 Want to talk to us?
 
 We have a Gitter. Here's our [invite link](https://gitter.im/unofficiallttnotifier/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
