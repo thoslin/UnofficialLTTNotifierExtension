@@ -6,21 +6,21 @@
     "description": "AluminiumTech's Unofficial LTT Notifier for FireFox. Based off of Mortis' LTT Notifier for FireFox \n\n* Adds an icon to your addon bar or address bar which shows the number of unread notifications and PMs you have\n* Displays a desktop notification when you get a new notification or PM\n* Browse your latest notifications and PMs from within the addon\n* Allows you to browse their latest videos, and notifies you when they upload a new one",
   "author":"AluminiumTech",
   "icons": {
-      "50": "logo_assets/icons/Logo_50.png",
-      "100": "logo_assets/icons/Logo_100.png"
+      "50": "assets/logo/Logo_50.png",
+      "100": "assets/logo/Logo_100.png"
     },
     "browser_action": {
       "default_icon": {
-        "30": "logo_assets/icons/Logo_30.png",
-        "50": "logo_assets/icons/Logo_50.png"
+        "30": "assets/logo/Logo_30.png",
+        "50": "assets/logo/Logo_50.png"
       },
       "default_title": "",
       "default_popup": "popup/legacy_html_min.html"
     },
     "page_action": {
       "default_icon": {
-        "30": "logo_assets/icons/Logo_30.png",
-        "50": "logo_assets/icons/Logo_50.png"
+        "30": "assets/logo/Logo_30.png",
+        "50": "assets/logo/Logo_50.png"
       },
       "default_title": "Whereami?",
       "default_popup": "popup/geo.html"
