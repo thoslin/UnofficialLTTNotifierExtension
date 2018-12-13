@@ -10,13 +10,9 @@ This is 100% unofficial and is created and maintained by fans.
 Portions of this work are licensed under Creative Commons 4.0 . In cases where we use other source code from open source software we will also include license information for those in separate license files. If a project's license is available in multiple languages, the English version shall prevail.
 
 ## Platforms we're planning on supporting
-* Mozilla FireFox (Desktop and Android)
-* Chromium/Google Chrome (Desktop only)
-* Next Generation Brave Browser (Desktop only) - 0.5x.x or newer
-
-| Extension Version | Mozilla Firefox | Chromium/Google Chrome | Brave Browser |
-|----|------|-----|---|------|
-| v0.1 | 60.0 ESR/60.0 Stable | 68.0 | 0.56.x |
+* Mozilla FireFox 60 or newer
+* Chromium/Google Chrome 68 or newer
+* Next Generation Brave Browser - 0.52.0 or newer
 
 ## Contributing to this project
 
@@ -27,7 +23,12 @@ Portions of this work are licensed under Creative Commons 4.0 . In cases where w
 * A Linus Tech Tips Forum Account (Optional). Note: Required for most features.
 
 ## To Do 
-See our [Trello Page](https://trello.com/b/jZdXt8h7).
+See [the Projects page](https://github.com/AluminiumTech/UnofficialLTTNotifierWebExtension/projects).
+
+## Supporting this Project
+If you wish to support this project financially, you can do so through Patreon.
+
+[![Support this project through Patreon](https://github.com/CSMarkBenchmark/CSMarkDesktop/blob/master/assets/patron_button.png)](https://www.patreon.com/aluminiumtech)
 
 ## What are the key differences between this and Colonel_Mortis' Unofficial LTT Notifier?
 
