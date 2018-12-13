@@ -1,5 +1,5 @@
 /*
-Part of AluminiumTech's Unofficial LTT Notifier for Firefox Extension.
+Part of AluminiumTech's Unofficial LTT Notifier WebExtension.
 
 Created by AluminiumTech.
 

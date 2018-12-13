@@ -1,12 +1,12 @@
 /*
-Part of AluminiumTech's Unofficial LTT Notifier for Firefox Extension.
+Part of AluminiumTech's Unofficial LTT Notifier WebExtension.
 
 Created by AluminiumTech.
-Version: 0.1
 */
 
 //Initialize the variable but don't store the API key in the source code.
-var youtube_apiKey = "";
+// Use the API key from config file.
+const secret = require('../config.json').youtubedataapikey;
 
 const youtube_WatchPageURL = "https://www.youtube.com/watch?v=";
 
