@@ -33,7 +33,7 @@ If you wish to support this project financially, you can do so through Patreon.
 ## What are the key differences between this and Colonel_Mortis' Unofficial LTT Notifier?
 
 Here are some of the differences:
-* We've updated the TimeAgo plugin to the latest version (v1
+* We've updated the TimeAgo plugin to the latest version
 * We've updated to the latest version of FontAwesome
 * We've updated to the latest version of jQuery
 * This extension is compatible with Modern Web Browsers like FireFox 60+ since it was re-designed for it.
