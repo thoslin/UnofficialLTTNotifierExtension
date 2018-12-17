@@ -4,7 +4,6 @@ Part of AluminiumTech's Unofficial LTT Notifier WebExtension.
 Created by AluminiumTech.
 */
 function playSound(sound){
-
   if(sound === ""){
     return false;
   }
