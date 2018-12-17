@@ -37,8 +37,9 @@ Here are some of the differences:
 * We've updated to the latest version of FontAwesome (v4.2.0 to v5.6.0)
 * We've updated to the latest version of jQuery (v2.2.1 to v3.3.1)
 * This extension is compatible with Modern Web Browsers like FireFox 60+ and Chromium since it was re-designed for it. Mortis' extension is now EOL whilst this is supported
+* This code has been designed from the ground up to be a lot easier to maintain in the future. Most functionality in the Javascript code is split up into a bunch of different files within a folder responsible for just what it needs to be responsible for.
 
-## Join Our Extension's Gitter.
+## Join Our Extension's Discord.
 Want to talk to us?
 
-We have a Gitter. Here's our [invite link](https://gitter.im/unofficiallttnotifier/Lobby?utm_source=share-link&utm_medium=link&utm_campaign=share-link)
+We have a Discord. Here's our [invite link](https://discord.gg/TZg8tbk)
