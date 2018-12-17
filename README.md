@@ -22,7 +22,7 @@ Portions of this work are licensed under Creative Commons 4.0 . In cases where w
 * A Git client. We use [GitHub Desktop](https://desktop.github.com).
 * A Linus Tech Tips Forum Account (Optional). Note: Required for most features.
 
-## To Do 
+## To Do
 See [the Projects page](https://github.com/AluminiumTech/UnofficialLTTNotifierWebExtension/projects).
 
 ## Supporting this Project
@@ -33,10 +33,10 @@ If you wish to support this project financially, you can do so through Patreon.
 ## What are the key differences between this and Colonel_Mortis' Unofficial LTT Notifier?
 
 Here are some of the differences:
-* We've updated the TimeAgo plugin to the latest version
-* We've updated to the latest version of FontAwesome
-* We've updated to the latest version of jQuery
-* This extension is compatible with Modern Web Browsers like FireFox 60+ since it was re-designed for it.
+* We've updated the TimeAgo plugin to the latest version (v1.5.2 to v1.6.3)
+* We've updated to the latest version of FontAwesome (v4.2.0 to v5.6.0)
+* We've updated to the latest version of jQuery (v2.2.1 to v3.3.1)
+* This extension is compatible with Modern Web Browsers like FireFox 60+ and Chromium since it was re-designed for it. Mortis' extension is now EOL whilst this is supported
 
 ## Join Our Extension's Gitter.
 Want to talk to us?
