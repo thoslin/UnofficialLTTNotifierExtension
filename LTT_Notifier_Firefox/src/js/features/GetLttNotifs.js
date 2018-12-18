@@ -6,5 +6,3 @@ Created by AluminiumTech.
 public function checkLTT(){
 
 }
-
-public function
