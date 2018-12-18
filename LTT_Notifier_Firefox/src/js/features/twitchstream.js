@@ -12,3 +12,7 @@ const secret = require('../config.json').twitchapikey;
 const twitch_watchpage_lmg_wan = "https://twitch.tv/linustech/";
 const twitch_watchpage_ltt_luke = "https://twitch.tv/luke_lafr/";
 const twitch_watchpage_ltt_colton = "https://www.twitch.tv/caltane/";
+
+public function getTwitchData(){
+  
+}

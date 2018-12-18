@@ -23,9 +23,6 @@ const ltt_newUpload_text = " was just uploaded the the LinusTechTips YouTube Cha
 const tq_newUpload_text = " was just uploaded the the TechQuickie YouTube Channel.";
 const csf_newUpload_text = " was just uploaded the the Channel Superfun YouTube Channel.";
 
-
-//Get the YouTube API Key in file youtube_api.txt
-// This is in the .gitignore and users forking or cloning this repository must provide their own API key.
-function getYouTubeApiKey(){
-
+public function getYouTubeData(){
+  
 }

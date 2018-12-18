@@ -11,6 +11,6 @@ function SetupSettings(){
   localStorage.set("", "");
 }
 
-function ModifySettings(){
-
+function modifySettings(key, data){
+  settings[key] = data;
 }
