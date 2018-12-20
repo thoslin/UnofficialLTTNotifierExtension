@@ -289,3 +289,12 @@ __pycache__/
 *.btm.cs
 *.odx.cs
 *.xsd.cs
+LTT_Notifier_Firefox/popup/src.txt
+LTT_Notifier_Firefox/popup/js/src.txt
+LTT_Notifier_Firefox/popup/js/api/src.txt
+LTT_Notifier_Firefox/src/config.json
+test/Logo_100.png
+test/Logo_30.png
+test/manifest.json
+test/popup.html
+test/popup.js
