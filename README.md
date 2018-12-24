@@ -40,9 +40,10 @@ Here are some of the differences:
 * This code has been designed from the ground up to be a lot easier to maintain in the future. Most functionality in the Javascript code is split up into a bunch of different files within a folder responsible for a very clear purpose.
 
 ## TODO
-* Desktop notifications.
-* Getting data from LTT.
-* Getting data from YouTube.
+* Desktop notifications - Johny
+* Getting data from LTT - Johny and AluminiumTech
+Make sure not to scrape LTT more than every 30 seconds.
+* Getting data from YouTube
 * Getting data from Twitch.
 * Handle Extension updates properly.
 

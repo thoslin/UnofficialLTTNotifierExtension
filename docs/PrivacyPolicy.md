@@ -20,8 +20,7 @@ We may collect non-personally identifiable information when users interact with 
 
 We may collect information such as:
 * Your Web Browser and Browser Version E.g. FireFox 61
-* Your Linus Tech Tips Account Credentials used to login
-* The Browser Extension Version E,g, v0.49.3
+* The Browser Extension Version E.g. v0.49.3
 
 ## How we use collected information
 We may collect and use information for the following purposes:
