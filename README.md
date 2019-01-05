@@ -34,7 +34,7 @@ If you wish to support this project financially, you can do so through Patreon.
 
 Here are some of the differences:
 * We've updated the TimeAgo plugin to the latest version (from v1.5.2 to v1.6.3)
-* We've updated to the latest version of FontAwesome (from v4.2.0 to v5.6.1)
+* We've updated to the latest version of FontAwesome (from v4.2.0 to v5.6.3)
 * We've updated to the latest version of jQuery (from v2.2.1 to v3.3.1)
 * This extension is compatible with Modern Web Browsers like FireFox 60+ and Chromium since it was re-designed for it. Mortis' extension is now EOL whilst this is supported.
 * This code has been designed from the ground up to be a lot easier to maintain in the future. Most functionality in the Javascript code is split up into a bunch of different files within a folder responsible for a very clear purpose.
