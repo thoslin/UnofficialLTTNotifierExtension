@@ -10,7 +10,7 @@ This is 100% unofficial and is created and maintained by fans.
 Portions of this work are licensed under Creative Commons 4.0 . In cases where we use other source code from open source software we will also include license information for those in separate license files. If a project's license is available in multiple languages, the English version shall prevail.
 
 ## Platforms we're planning on supporting
-* Mozilla FireFox 60 or newer
+* Mozilla FireFox 60+
 * Chromium/Google Chrome 68 or newer
 * Next Generation Brave Browser - 0.52.0 or newer
 
@@ -22,13 +22,8 @@ Portions of this work are licensed under Creative Commons 4.0 . In cases where w
 * A Git client. We use [GitHub Desktop](https://desktop.github.com).
 * A Linus Tech Tips Forum Account (Optional). Note: Required for most features.
 
-## To Do
-See [the Projects page](https://github.com/AluminiumTech/UnofficialLTTNotifierWebExtension/projects).
-
 ## Supporting this Project
-If you wish to support this project financially, you can do so through Patreon.
-
-[![Support this project through Patreon](https://github.com/CSMarkBenchmark/CSMarkDesktop/blob/master/assets/patron_button.png)](https://www.patreon.com/aluminiumtech)
+If you wish to support this project financially, you can do so by making a donation to [my Paypal](https://www.paypal.me/aluminiumtech).
 
 ## What are the key differences between this and Colonel_Mortis' Unofficial LTT Notifier?
 
@@ -42,13 +37,13 @@ Here are some of the differences:
 * This code has been designed from the ground up to be a lot easier to maintain in the future. Most functionality in the Javascript code is split up into a bunch of different files within a folder responsible for a very clear purpose.
 
 ## TODO
-* Desktop notifications - Johny
-* Getting data from LTT - Johny and AluminiumTech
-Make sure not to scrape LTT more than every 30 seconds.
-* Getting data from YouTube
-* Getting data from Twitch.
-* Handle Extension updates properly.
+* Getting data from LTT - Johny and AluminiumTech - Make sure not to scrape LTT more than every 30 seconds.Ideally every 60 seconds.
+* Getting data from YouTube - AluminiumTech
+* Getting data from Twitch - Johny/AluminiumTech
+* Handle Extension updates properly - AluminiumTech
 
+### Done
+* Desktop notifications - Johny
 
 ## Join Our Extension's Discord.
 Want to talk to us?
