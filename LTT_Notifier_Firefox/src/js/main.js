@@ -19,6 +19,7 @@ var youtubeContent = require('youtubecontent.js');
 var twitchStream = require('twitchstream.js');
 var soundPlayer = require('playsound.js');
 var compareVersion = require('versioncomparison.js');
+var notifications = require('notifications.js');
 
 public function returnInstalledVersion(){
   return extension_installed_version;
@@ -88,6 +89,10 @@ function playSound(sound){
   soundPlayer.playSound(sound);
 }
 
-function desktopNotification(data){
+function createNotification(data, notificationShowing){
+  notifications.createNotification(data, notificationShowing);
+}
 
+function requestNotificationPermission(){
+ notifications.requestPermission(); 
 }
