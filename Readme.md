@@ -20,7 +20,7 @@ Portions of this work are licensed under Creative Commons 4.0 . In cases where w
 * A supported browser to test on.
 * A text or code editor. We recommend [Atom](https://atom.io).
 * A Git client. We use [GitHub Desktop](https://desktop.github.com).
-* A Linus Tech Tips Forum Account (Optional). Note: Required for most features.
+* A Linus Tech Tips Forum Account (Optional). Note: Required for almost all features.
 
 ## Supporting this Project
 If you wish to support this project financially, you can do so by making a donation to [my Paypal](https://www.paypal.me/aluminiumtech).
