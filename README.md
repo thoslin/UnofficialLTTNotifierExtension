@@ -29,7 +29,7 @@ If you wish to support this project financially, you can do so by making a donat
 
 Here are some of the differences:
 * We've updated the TimeAgo plugin to the latest version (from v1.5.2 to v1.6.3)
-* We've updated to the latest version of FontAwesome (from v4.2.0 to v5.6.3)
+* We've updated to the latest version of FontAwesome (from v4.2.0 to v5.7.1)
 * We've updated to the latest version of jQuery (from v2.2.1 to v3.3.1)
 * We're using the latest version of Bootstrap (v4.2.1)
 

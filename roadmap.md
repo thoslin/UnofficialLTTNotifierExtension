@@ -7,7 +7,10 @@
 * Implement browser notifications for activity such as status updates.
 * Add Settings UI and functionality using WebStorage
 
-### 1.0
+### v1.00
+* Fixed bugs in pre-release versions.
+
+### Possibly v2.00
 * Implement optional browser notifications for when a new video is uploaded using YouTube APIs
 * Implement optional browser notifications for when WAN Show starts using Twitch APIs.
 * Completely re-designed UI from the ground up.
