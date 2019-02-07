@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "alutech-unofficial-lttnotifier",
-    "version": "1.0",
+    "version": "0.1",
   "homepage_url":"",
     "description": "AluminiumTech's Unofficial LTT Notifier for FireFox. Based off of Mortis' LTT Notifier for FireFox \n\n* Adds an icon to your addon bar or address bar which shows the number of unread notifications and PMs you have\n* Displays a desktop notification when you get a new notification or PM\n* Browse your latest notifications and PMs from within the addon\n* Allows you to browse their latest videos, and notifies you when they upload a new one",
   "author":"AluminiumTech",
@@ -18,11 +18,11 @@
       "default_popup": "popup/legacy_html_min.html"
     },
     "default_locale": "en",
-    "permissions": ["webNavigation", "activeTab", "notifications"],
+    "permissions": ["webNavigation", "tabs", "activeTab", "notifications"],
     "content_scripts": [
       {
         "matches": ["*://www.linustechtips.com/*"],
-        "js": ["lttnotifier.js"]
+        "js": ["js/main.js"]
       }
     ]
 
