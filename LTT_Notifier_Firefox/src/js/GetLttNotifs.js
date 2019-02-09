@@ -18,5 +18,45 @@ See the License for the specific language governing permissions and
 limitations under the License.
 */
 public function checkLTT(){
+  checkIfLttIsOpenInATab();
 
+}
+
+function checkIfLttIsOpenInATab(){
+
+  try{
+    browser.tabs.query
+  }
+  catch{
+
+  }
+}
+
+//From Mortis' code.
+function checkTabFF(tab){
+  if (lttTab.indexOf(tab) > -1) {
+    lttTab.splice(lttTab.indexOf(tab), 1);
+    debug("LTT tab changed");
+  }
+  if (tab.url !== undefined && /^https?:\/\/(?:[^\.]+\.)?linustechtips\.com\/main\/(?!admin)/.test(tab.url) === true) {
+    debug("ltt tab opened or loaded");
+  //  lttTab.push(tab);
+//    panel.port.emit("ltt-tab", true);
+    tab.on("close", processTabClose);
+  } else if (lttTab.length === 0) {
+//    panel.port.emit("ltt-tab", false);
+  }
+}
+
+
+function checkTabChrome(){
+
+}
+
+
+function processTabClose(tab){
+  if (lttTab.indexOf(tab) > -1) {
+    lttTab.splice(lttTab.indexOf(tab), 1);
+    debug("LTT tab closed");
+  }
 }
