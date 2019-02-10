@@ -36,11 +36,16 @@ Here are some of the differences:
 * This extension is compatible with Modern Web Browsers like FireFox 60+ and Chromium since it was re-designed for it. Mortis' extension is now EOL whilst this is supported.
 * This code has been designed from the ground up to be a lot easier to maintain in the future. Most functionality in the Javascript code is split up into a bunch of different files within a folder responsible for a very clear purpose.
 
+Some extra features we're planning to add:
+* Allow users to use less data by optionally checking for updates less frequently - This should be particularly helpful if your internet usage is capped to a certain amount of data..
+
 ## TODO
-* Getting data from LTT - Johny and AluminiumTech - Make sure not to scrape LTT more than every 30 seconds.Ideally every 60 seconds.
-* Getting data from YouTube - AluminiumTech
+* Getting data from LTT - Johny and AluminiumTech
+* Getting data from YouTube - Johny/AluminiumTech
 * Getting data from Twitch - Johny/AluminiumTech
 * Handle Extension updates properly - AluminiumTech
+* Finish settings management - AluminiumTech
+* Add code to help migrate settings across extension updates - AluminiumTech
 
 ### Done
 * Desktop notifications - Johny
