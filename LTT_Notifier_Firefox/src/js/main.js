@@ -28,12 +28,14 @@ var extension_installed_version = require('../manifest.json').version;
 
 
 //JS Files we require go here
-var youtubeContent = require('youtubecontent.js');
-var twitchStream = require('twitchstream.js');
+var lttnotifier = require('getLTTNotifs.js');
 var soundPlayer = require('playsound.js');
 var compareVersion = require('versioncomparison.js');
 var notifications = require('notifications.js');
 var settings = require('settings.js');
+
+var youtubeContent = require('youtubecontent.js');
+var twitchStream = require('twitchstream.js');
 
 public function returnInstalledVersion(){
   return extension_installed_version;
