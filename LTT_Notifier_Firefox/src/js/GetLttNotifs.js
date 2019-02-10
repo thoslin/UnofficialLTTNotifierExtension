@@ -17,7 +17,13 @@ WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
 */
-public function checkLTT(){
+var settings = require('settings.js');
+
+function getLTTForumData(){
+  
+}
+
+function checkLTT(){
   checkIfLttIsOpenInATab();
 
 }
@@ -25,7 +31,8 @@ public function checkLTT(){
 function checkIfLttIsOpenInATab(){
 
   try{
-    browser.tabs.query
+  //  browser.tabs.query
+
   }
   catch{
 
@@ -58,5 +65,48 @@ function processTabClose(tab){
   if (lttTab.indexOf(tab) > -1) {
     lttTab.splice(lttTab.indexOf(tab), 1);
     debug("LTT tab closed");
+  }
+}
+
+
+
+
+
+//Resets the interval used to get data from ltt/twitch/yt/etc
+//which MUST be one of: "ltt" "reports" "yt" "twitch"
+function resetInterval(which) {
+  switch (which) {
+    case "ltt":
+      clearInterval(lttUpdateInterval);
+      lttUpdateInterval = setInterval(function() {
+        checkLTT();
+      }, settings["updateTime.ltt"] * 1000);
+      debug("reset LTT interval");
+      break;
+    case "reports":
+      clearInterval(reportUpdateInterval);
+      if (settings.moderator) {
+        reportUpdateInterval = setInterval(function() {
+          getReports();
+        }, settings["updateTime.reports"] * 60000);
+        debug("reset report interval");
+      }
+      break;
+    case "yt":
+      clearInterval(ytUpdateInterval);
+      ytUpdateInterval = setInterval(function() {
+        checkYouTube();
+      }, settings["updateTime.yt"] * 60000);
+      debug("reset yt interval");
+      break;
+    case "twitch":
+      clearInterval(twitchUpdateInterval);
+      twitchUpdateInterval = setInterval(function() {
+        checkTwitch();
+      }, settings["updateTime.twitch"] * 60000);
+      debug("reset twitch interval");
+      break;
+    default:
+      callError("reset interval called on invalid target - " + which);
   }
 }

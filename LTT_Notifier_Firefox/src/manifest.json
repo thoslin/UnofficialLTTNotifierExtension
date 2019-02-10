@@ -18,7 +18,7 @@
       "default_popup": "popup/legacy_html_min.html"
     },
     "default_locale": "en",
-    "permissions": ["webNavigation", "tabs", "activeTab", "notifications"],
+    "permissions": ["storage", "webNavigation", "tabs", "activeTab", "notifications"],
     "content_scripts": [
       {
         "matches": ["*://www.linustechtips.com/*"],

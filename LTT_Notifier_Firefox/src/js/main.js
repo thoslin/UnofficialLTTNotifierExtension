@@ -25,8 +25,7 @@ var ltt_forum_api_page = "https://linustechtips.com/main/page/api.php";
 //Initialize the variable but don't store the srcID in the source code.
 var extension_src_url = require('../config.json').lttapisrc;
 var extension_installed_version = require('../manifest.json').version;
-//Make sure we can support Chrome/Chromium and Firefox.
-var browser;
+
 
 //JS Files we require go here
 var youtubeContent = require('youtubecontent.js');
@@ -34,18 +33,10 @@ var twitchStream = require('twitchstream.js');
 var soundPlayer = require('playsound.js');
 var compareVersion = require('versioncomparison.js');
 var notifications = require('notifications.js');
+var settings = require('settings.js');
 
 public function returnInstalledVersion(){
   return extension_installed_version;
-}
-
-function determineBrowser(){
-  if(browser == "firefox"){
-
-  }
-  else if(browser == "chrome"){
-
-  }
 }
 
 // The global variables go here:
@@ -61,7 +52,7 @@ var messageCount = 0,
     "slick": false,
     "colton": false,
   },
-  volume = parseFloat(settings["sound.volume"]),
+//  volume = parseFloat(settings["sound.volume"]),
   lttTab = [],
   audioTimeout = null,
   audioQueue = [], //AUTOMATED - don't touch
@@ -76,7 +67,7 @@ var messageCount = 0,
   			csf: "",
         tl:"",
   		}, //holds the etag from the youtube update to reduce download usage
-  messagesShown = JSON.parse(settings.messagesShown),
+//  messagesShown = JSON.parse(settings.messagesShown),
   panel,
   lttModders = [], //Holds an array of all the LTT page workers so that messages can be dispatched to them
   notificationArray = []; //holds a shortened list of all the notificaitons, to allow for comparison (to check whether it changed)
