@@ -19,8 +19,41 @@ limitations under the License.
 */
 var settings = require('settings.js');
 
+const baseUrl = "https://linustechtips.com/main/";
+
+function callError(error){
+  console.log(error);
+}
+
 function getLTTForumData(){
-  
+
+  var xhr = new XMLHttpRequest();
+  xhr.addEventListener("loadend", function() {
+    if (xhr.responseText !== null && xhr.responseText !== "nopermission" && xhr.status === 200) {
+      checkLTT(true); //We want it to check whether there have been any notifications since the last time we updated
+      debug("XHR success");
+    } else {
+      callError("XHR Failed with status:" + xhr.status + " and data: " + xhr.responseText);
+    }
+  });
+  switch (what) {
+    case "notifications":
+      xhr.open("post", baseUrl +
+        'notifications/?nocache=' + (new Date()).getTime(), true);
+      break;
+    case "messages":
+      xhr.open("post", baseUrl +
+        '?app=core&module=messaging&controller=messenger&overview=1&nocache=' + (new Date()).getTime(),
+        true);
+      break;
+    default:
+      callError("Marking unknown type as read: " + what);
+  }
+  xhr.setRequestHeader("content-type", "application/x-www-form-urlencoded");
+  //xhr.setRequestHeader("Host", "linustechtips.com");
+  xhr.setRequestHeader("X-Requested-With", "XMLHttpRequest");
+  xhr.send();
+  }
 }
 
 function checkLTT(){
@@ -30,36 +63,28 @@ function checkLTT(){
 
 function checkIfLttIsOpenInATab(){
 
-  try{
-  //  browser.tabs.query
+var tabs;
 
+    //  browser.tabs.query
+    for(i = 0; i < tabs; i++){
+      try{
+        checkTabFireFox(tabs[i]);
+      }
+      catch{
+        checkTabChrome(tabs[i]);
+      }
   }
-  catch{
 
-  }
 }
 
-//From Mortis' code.
-function checkTabFF(tab){
-  if (lttTab.indexOf(tab) > -1) {
-    lttTab.splice(lttTab.indexOf(tab), 1);
-    debug("LTT tab changed");
-  }
-  if (tab.url !== undefined && /^https?:\/\/(?:[^\.]+\.)?linustechtips\.com\/main\/(?!admin)/.test(tab.url) === true) {
-    debug("ltt tab opened or loaded");
-  //  lttTab.push(tab);
-//    panel.port.emit("ltt-tab", true);
-    tab.on("close", processTabClose);
-  } else if (lttTab.length === 0) {
-//    panel.port.emit("ltt-tab", false);
-  }
+function checkTabFireFox(tab){
+
 }
 
 
 function checkTabChrome(){
 
 }
-
 
 function processTabClose(tab){
   if (lttTab.indexOf(tab) > -1) {
@@ -69,8 +94,9 @@ function processTabClose(tab){
 }
 
 
+function clearInterval(interval){
 
-
+}
 
 //Resets the interval used to get data from ltt/twitch/yt/etc
 //which MUST be one of: "ltt" "reports" "yt" "twitch"

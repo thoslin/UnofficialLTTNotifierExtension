@@ -26,9 +26,8 @@ var ltt_forum_api_page = "https://linustechtips.com/main/page/api.php";
 var extension_src_url = require('../config.json').lttapisrc;
 var extension_installed_version = require('../manifest.json').version;
 
-
 //JS Files we require go here
-var lttnotifier = require('getLTTNotifs.js');
+var lttnotifier = require('notifier.js');
 var soundPlayer = require('playsound.js');
 var compareVersion = require('versioncomparison.js');
 var notifications = require('notifications.js');
