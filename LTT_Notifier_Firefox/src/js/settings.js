@@ -39,11 +39,16 @@ function setupSettings(){
   set("twitchUpdateTimeMinutes", 1);
   //
   set("lttUpdateInterval", 1000 * ((60 * get(updateTimeMinutes)) * get(slowerUpdatesToSaveData)));
-  //Only for users who are LTT moderators or admins.
-  set("reportUpdateInterval", 1000 * ((60 * get(updateTimeMinutes)) * get(slowerUpdatesToSaveData)));
   //Set YouTube and Twitch update intervals.
   set("youtubeUpdateInterval", 1000 * (60 * get(youtubeUpdateTimeMinutes)) * get(slowerUpdatesToSaveData)));
   set("twitchUpdateInterval", 1000 * (60 * get(twitchUpdateTimeMinutes)) * get(slowerUpdatesToSaveData)));
+
+  set("volume", );
+  set("enableSoundsForNotifications", "true");
+  set("enableSoundsForMessageNotifications", "true");
+  set("enableSoundsForYouTubeNotifications", "true");
+
+  set("youtubeLatest", "true");
 }
 
 function modify(key, data){
