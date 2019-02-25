@@ -25,18 +25,20 @@ function migrateSettings(){
 }
 
 function setupSettings(){
+  //Allow LTT Forum API checks every 30 seconds after being activated but dynamically switch back to regular speed if there is no notification activity.
+  set("enableDynamicallyFasterUpdates", true);
   //Help save data for user in case they really desperately need to save data.
-  //A value of 1 is the normal speed. Any value less than 1 is not okay.
+  //A value of 1 is the normal speed. Any value less than 0 is not okay.
   //A value of 2 will make notification checks happen 2x less frequently.
   set("slowerUpdatesToSaveData", 1);
   // Set the update interval to once every 60 seconds
   set("updateTimeMinutes", 1);
-  // Set this to every 5 minutes because YouTube videos aren't released more than a few times per day.
+  // Set this to every X number of minutes because YouTube videos aren't released more than a few times per day.
   //We may need to add a way to allow users to easily be more quickly noitified of YouTube Live Streams if they want to use YouTube Live Streams instead.
   // We can use less of our quota this way.
-  set("youtubeUpdateTimeMinutes", 5);
+  set("youtubeUpdateTimeMinutes", 60);
   // Set this to every 1 minute.
-  set("twitchUpdateTimeMinutes", 1);
+  set("twitchUpdateTimeMinutes", 60);
   //
   set("lttUpdateInterval", 1000 * ((60 * get(updateTimeMinutes)) * get(slowerUpdatesToSaveData)));
   //Set YouTube and Twitch update intervals.
@@ -49,6 +51,8 @@ function setupSettings(){
   set("enableSoundsForYouTubeNotifications", "true");
 
   set("youtubeLatest", "true");
+// For when deciding to use GA or not use GA.
+  set("enableAnalyticsTelemetry", "true");
 }
 
 function modify(key, data){

@@ -31,7 +31,7 @@ function playSound(sound){
     settings["sound.volume"] = 1;
     volume = 1;
   }
-
+//Double check this later.
   var audio = new Audio(sound);
   audio.volume = volume;
   audio.play();

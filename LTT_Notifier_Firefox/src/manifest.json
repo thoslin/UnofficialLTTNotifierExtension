@@ -15,7 +15,7 @@
         "50": "assets/logo/Logo_50.png"
       },
       "default_title": "",
-      "default_popup": "popup/legacy_html_min.html"
+      "default_popup": "html/index.html"
     },
     "default_locale": "en",
     "permissions": ["storage", "webNavigation", "tabs", "activeTab", "notifications"],
